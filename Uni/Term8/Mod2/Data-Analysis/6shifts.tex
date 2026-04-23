@@ -1,0 +1,192 @@
+\documentclass[12pt]{article}
+
+\title{Cambios en la Arquitectura de Datos seg\'un McKinsey}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+A continuaci\'on, se analizan cada uno de los seis cambios (shifts) propuestos por McKinsey en la arquitectura de datos, abordando su significado, las tecnolog\'ias involucradas, las ventajas que ofrecen y los trade-offs asociados.
+
+\section{De plataformas de datos on-premise a basadas en la nube}
+
+\textbf{\textquestiondown Qu\'e implica?} \par
+Migrar la infraestructura de almacenamiento y procesamiento de datos desde servidores locales hacia servicios en la nube.
+
+\textbf{Tecnolog\'ias necesarias:}
+\begin{itemize}
+\item AWS, Microsoft Azure, Google Cloud Platform
+\item Amazon S3, Azure Blob Storage
+\item AWS EMR, Azure Databricks, Google BigQuery
+\item Kubernetes, Terraform
+\item IAM, VPC, cifrado
+\end{itemize}
+
+\textbf{Ventajas:}
+\begin{itemize}
+\item Escalabilidad el\'astica
+\item Reducci\'on de costos operativos
+\item Servicios gestionados
+\item Mayor agilidad
+\item Alta disponibilidad
+\end{itemize}
+
+\textbf{Trade-offs:}
+\begin{itemize}
+\item Vendor lock-in
+\item Costos variables
+\item Cumplimiento normativo
+\item Latencia de red
+\end{itemize}
+
+\section{De procesamiento por lotes a tiempo real}
+
+\textbf{\textquestiondown Qu\'e implica?} \par
+Procesar datos de forma continua en lugar de intervalos programados.
+
+\textbf{Tecnolog\'ias necesarias:}
+\begin{itemize}
+\item Apache Kafka, Flink, Spark Streaming, Amazon Kinesis
+\item RabbitMQ
+\item Apache Druid, ClickHouse, Redis
+\item Apache NiFi, StreamSets
+\end{itemize}
+
+\textbf{Ventajas:}
+\begin{itemize}
+\item Decisiones m\'as r\'apidas
+\item Mejor experiencia del cliente
+\item Detecci\'on temprana de anomal\'ias
+\item Mayor capacidad de respuesta
+\end{itemize}
+
+\textbf{Trade-offs:}
+\begin{itemize}
+\item Alta complejidad t\'ecnica
+\item Costos elevados
+\item Consistencia eventual
+\item Necesidad de capacitaci\'on
+\end{itemize}
+
+\section{De soluciones preintegradas a plataformas modulares}
+
+\textbf{\textquestiondown Qu\'e implica?} \par
+Adoptar herramientas especializadas en lugar de suites monol\'iticas.
+
+\textbf{Tecnolog\'ias necesarias:}
+\begin{itemize}
+\item APIs, Apache Airflow, Prefect
+\item Apache Atlas, Amundsen
+\item Snowflake, Databricks, BigQuery
+\item Tableau, Power BI, Looker
+\item Collibra, Privacera
+\end{itemize}
+
+\textbf{Ventajas:}
+\begin{itemize}
+\item Flexibilidad
+\item Menor dependencia de proveedores
+\item Innovaci\'on r\'apida
+\item Optimizaci\'on de costos
+\end{itemize}
+
+\textbf{Trade-offs:}
+\begin{itemize}
+\item Complejidad de integraci\'on
+\item Necesidad de habilidades diversas
+\item Problemas de compatibilidad
+\item Mayor esfuerzo en gobernanza
+\end{itemize}
+
+\section{De acceso punto a punto a acceso desacoplado}
+
+\textbf{\textquestiondown Qu\'e implica?} \par
+Uso de APIs y eventos en lugar de integraciones directas.
+
+\textbf{Tecnolog\'ias necesarias:}
+\begin{itemize}
+\item REST, GraphQL, gRPC
+\item Kafka, EventBridge, Pub/Sub
+\item Istio, Linkerd
+\item Denodo, Dremio
+\item Apigee, Kong
+\end{itemize}
+
+\textbf{Ventajas:}
+\begin{itemize}
+\item Menor acoplamiento
+\item Reutilizaci\'on
+\item Mayor control
+\item Evoluci\'on independiente
+\end{itemize}
+
+\textbf{Trade-offs:}
+\begin{itemize}
+\item Latencia adicional
+\item Complejidad
+\item Gesti\'on de versiones
+\item Sobrecarga de comunicaci\'on
+\end{itemize}
+
+\section{De data warehouse a arquitectura por dominios}
+
+\textbf{\textquestiondown Qu\'e implica?} \par
+Descentralizar los datos por dominios de negocio (data mesh).
+
+\textbf{Tecnolog\'ias necesarias:}
+\begin{itemize}
+\item Data mesh
+\item Presto, Trino
+\item DataHub, Apache Atlas
+\item Kubernetes
+\item Gobierno federado
+\end{itemize}
+
+\textbf{Ventajas:}
+\begin{itemize}
+\item Autonom\'ia
+\item Escalabilidad organizacional
+\item Eliminaci\'on de cuellos de botella
+\item Alineaci\'on con negocio
+\end{itemize}
+
+\textbf{Trade-offs:}
+\begin{itemize}
+\item Riesgo de silos
+\item Complejidad de gobernanza
+\item Necesidad de plataforma self-service
+\item Cambio cultural
+\end{itemize}
+
+\section{De modelos r\'igidos a esquemas flexibles}
+
+\textbf{\textquestiondown Qu\'e implica?} \par
+Adoptar esquemas din\'amicos y datos semiestructurados.
+
+\textbf{Tecnolog\'ias necesarias:}
+\begin{itemize}
+\item MongoDB, Cassandra
+\item Parquet, Avro, ORC
+\item Apache Spark, Presto
+\item AWS Lake Formation, Azure Data Lake
+\item Hive Metastore, AWS Glue
+\end{itemize}
+
+\textbf{Ventajas:}
+\begin{itemize}
+\item Alta adaptabilidad
+\item Desarrollo r\'apido
+\item Soporte para datos no estructurados
+\item Facilita experimentaci\'on
+\end{itemize}
+
+\textbf{Trade-offs:}
+\begin{itemize}
+\item Menor integridad
+\item M\'as l\'ogica en aplicaci\'on
+\item Dificultad en calidad de datos
+\item Posible menor rendimiento
+\end{itemize}
+
+\end{document}

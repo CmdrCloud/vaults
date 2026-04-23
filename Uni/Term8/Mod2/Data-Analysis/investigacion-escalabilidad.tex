@@ -1,0 +1,97 @@
+\documentclass[11pt]{article}
+
+% Useful packages
+\usepackage[margin=1in]{geometry}
+\usepackage{array}
+
+\title{Investigacion Escalabilidad Horizontal y Vertical}
+\author{Andreas Garoufalias}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Este informe analiza las diferencias, características, ventajas y desventajas de la escalabilidad horizontal y vertical.
+\end{abstract}
+
+\section{Introduccion}
+
+La escalabilidad es uno de los pilares mas grandes del mundo del software y hardware. Permitio la edad de la informacion - en el que vivimos hoy en dia - y dio introdujo la nube en nuestras vidas. Vamos a analizar los dos tipos de escalabilidad, horizontal y vertical, y entender la tecnologia que nos dio a todos una vida mas comoda.
+
+\section{Escalabilidad Horizontal}
+
+La escalabilidad horizontal, "scaling out," se refiere a agregar una o mas computadoras a un sistema para distribuir procesamiento. Las computadoras agregadas se les dicen "nodos," o servidores. Este tipo de escalabilidad se utiliza bastante en datacentres, datawarehouses, y otros tipos de centros de procesamiento de datos.
+\newline
+
+\textbf{Escalabilidad horizontal hace lo siguiente:}
+\begin{itemize}
+\item Agrega mas de un punto de fallo.
+\item Aumenta las capacidades de un sistema casi infinitamente, con algunas excepciones.
+\end{itemize}
+
+\textbf{Este tipo de escalabilidad ofrece las siguientes caracteristicas:}
+\begin{itemize}
+\item Alta tolerancia a fallos
+\item Capacidades aumentadas de almacenamiento y rendimiento.
+\item Varios tipos de uso.
+\item Complejidad alta de configuracion.
+\end{itemize}
+
+Finalmente, se utiliza mayormente por empresas medianas o grandes debido al costo de implementar este tipo de escalabilidad.
+
+\section{Escalabilidad vertical}
+
+La escalabilidad vertical, "scaling up," se refiere a aumentar las capacidades de una computadora, por ejemplo, cambiar el modelo del CPU por uno mas reciente y eficiente o agregar RAM ademas de el RAM que ya esta presente en la computadora. Este tipo de escalabilidad se utiliza mayormente por invididuales y empresas diminutas.
+\newline
+
+\textbf{Escalabilidad vertical hace lo siguiente:}
+\begin{itemize}
+	\item Agrega a o mejora las capacidades de una computadora individual.
+	\item Permite una configuracion simple para realizarla la misma.
+\end{itemize}
+
+\textbf{La escalabilidad vertical ofrece las siguientes caracteristicas:}
+\begin{itemize}
+	\item Configuracion simple.
+	\item Costo bajo comparado con la escalabilidad horizontal.
+	\item Accesibilidad.
+	\item Baja tolerancia a fallos debido a un solo punto de fallo.	
+\end{itemize}
+
+
+\section{Comparacion}
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{p{8cm} p{8cm}}
+\textbf{Horizontal} & \textbf{Vertical} \\[6pt]
+
+Alta tolerancia a fallos. &
+Baja tolerancia a fallos. \\
+
+Complejidad alta de implementacion. &
+Implementacion sencilla. \\
+
+Altamente costoso en infraestructura. &
+Costo relativamente bajo inicialmente. \\
+
+Permite agregar multiples servidores o nodos. &
+Solo permite mejorar un solo servidor. \\
+
+Mayor escalabilidad a largo plazo. &
+Escalabilidad limitada por el hardware. \\
+
+Mayor complejidad en la gestion del sistema. &
+Administracion mas simple del sistema. \\
+
+Ideal para sistemas distribuidos y aplicaciones web grandes. &
+Mas comun en sistemas pequenos o monoliticos. \\
+
+\end{tabular}
+\caption{Comparacion entre escalamiento horizontal y vertical}
+\end{table}
+
+\end{document}
