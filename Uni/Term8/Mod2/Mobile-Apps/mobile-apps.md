@@ -1788,3 +1788,19 @@ The ApiService class centralises all API calls in a single place.
 2. specify in pubspec.yaml (dependencies: flutter: sdk: flutter  http: ^1.2.0)
 3. import the file that will use it: `import 'package:http/http.dart' as http;`
 4. add internet permissions in android: `<uses-permission android:name="android.permission.INTERNET"/>`
+
+## Forms in Flutter: Form and TextFormField
+
+Forms are built with the Form widget and TextFormField fields.
+The Form widget acts like a container that groups all fields and allows
+you to validate and save their values with what's called a GlobalKey.
+
+## Submit buttons
+
+The most common pattern is to have a single widget that shows the normal button
+when its not loaded
+
+## State life cycle
+
+The texteditingcontroller uses memory. If its not freed when the page is closed,
+the app will have a memory leak.

@@ -1,4 +1,4 @@
-import 'vehiculo.dart';
+/*import 'vehiculo.dart';
 
 final List<Vehiculo> vehiculosDePrueba = [
   Vehiculo(
@@ -107,3 +107,4 @@ final List<Vehiculo> vehiculosDePrueba = [
     estado: "Disponible",
   ),
 ];
+*/

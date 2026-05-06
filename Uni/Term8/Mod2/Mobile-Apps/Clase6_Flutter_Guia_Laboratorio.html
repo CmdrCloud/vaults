@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clase 6 - Guia de Laboratorio Flutter</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:"Segoe UI",Arial,sans-serif; font-size:15px; line-height:1.75; color:#1f2937; background:#f8fafc; }
+    .enc { background:#1b5e20; color:white; padding:36px 60px 28px 60px; }
+    .enc .et { font-size:11px; letter-spacing:.1em; color:#a5d6a7; margin-bottom:8px; text-transform:uppercase; }
+    .enc h1 { font-size:28px; font-weight:700; margin-bottom:5px; }
+    .enc .sub { font-size:17px; color:#c8e6c9; margin-bottom:20px; }
+    .enc .meta { display:flex; gap:14px; flex-wrap:wrap; }
+    .mi { background:#2e7d32; border:1px solid #66bb6a; border-radius:6px; padding:7px 16px; }
+    .mi .ml { font-size:10px; color:#a5d6a7; text-transform:uppercase; letter-spacing:.06em; }
+    .mi .mv { font-size:13px; font-weight:600; color:white; }
+    .cont { max-width:960px; margin:0 auto; padding:36px 40px 56px 40px; }
+    .sec { margin-bottom:48px; }
+    h2 { font-size:20px; font-weight:700; color:#1b5e20; padding-bottom:7px; border-bottom:2px solid #2e7d32; margin-bottom:16px; }
+    h3 { font-size:16px; font-weight:700; color:#2e7d32; margin:24px 0 9px 0; }
+    p  { margin-bottom:11px; }
+    ul,ol { padding-left:22px; margin-bottom:11px; }
+    li { margin-bottom:6px; }
+    code { font-family:"Consolas","Courier New",monospace; font-size:13px; background:#f1f5f9; padding:1px 6px; border-radius:3px; color:#1565c0; }
+    .caja { border-radius:6px; padding:14px 18px; margin:14px 0; border-left:4px solid; }
+    .caja strong { display:block; margin-bottom:4px; font-size:13px; }
+    .caja p,.caja li { margin:0; font-size:13px; line-height:1.65; }
+    .caja ul,.caja ol { margin:5px 0 0 0; }
+    .ci { background:#dbeafe; border-color:#1565c0; color:#1e3a5f; }
+    .ci strong { color:#1565c0; }
+    .co { background:#dcfce7; border-color:#1b5e20; color:#14532d; }
+    .co strong { color:#1b5e20; }
+    .ca { background:#fff3e0; border-color:#e65100; color:#7c2d12; }
+    .ca strong { color:#e65100; }
+    .ce { background:#fef2f2; border-color:#b91c1c; color:#7f1d1d; }
+    .ce strong { color:#b91c1c; }
+    .cm { background:#f3e5f5; border-color:#6a1b9a; color:#3b0764; }
+    .cm strong { color:#6a1b9a; }
+    .bloque { margin:14px 0; }
+    .ct { background:#334155; color:#94a3b8; font-family:"Consolas","Courier New",monospace; font-size:11px; padding:5px 14px; border-radius:6px 6px 0 0; }
+    pre { background:#0f172a; color:#e2e8f0; font-family:"Consolas","Courier New",monospace; font-size:13px; line-height:1.65; padding:18px 22px; border-radius:0 0 6px 6px; overflow-x:auto; margin:0; white-space:pre; }
+    .st pre { border-radius:6px; }
+    .c  { color:#6a9955; }
+    .k  { color:#569cd6; }
+    .s  { color:#ce9178; }
+    .t  { color:#4ec9b0; }
+    .v  { color:#9cdcfe; }
+    .w  { color:#fcd34d; }
+    table { width:100%; border-collapse:collapse; margin:14px 0; font-size:14px; }
+    thead th { background:#2e7d32; color:white; padding:9px 13px; text-align:left; font-weight:600; }
+    tbody tr:nth-child(even) { background:#f1f8f1; }
+    tbody tr:nth-child(odd)  { background:white; }
+    tbody td { padding:9px 13px; border:1px solid #e2e8f0; vertical-align:top; }
+    .pie { background:#1b5e20; color:#c8e6c9; text-align:center; padding:24px; font-size:13px; }
+    .pie strong { color:white; display:block; font-size:15px; margin-bottom:4px; }
+    hr { border:none; border-top:1px solid #e2e8f0; margin:36px 0; }
+    .ns { display:inline-block; background:#2e7d32; color:white; font-weight:700; font-size:12px; border-radius:50%; width:26px; height:26px; line-height:26px; text-align:center; margin-right:7px; vertical-align:middle; }
+    @media print { body{background:white;font-size:13px;} .enc,pre,thead th,.pie{-webkit-print-color-adjust:exact;print-color-adjust:exact;} }
+  </style>
+</head>
+<body>
+<div class="enc">
+  <div class="et">Proyecto de Aplicaciones Moviles &mdash; Clase Final</div>
+  <h1>Clase 6 de 6 &mdash; Guia de Laboratorio</h1>
+  <div class="sub">Compilar y Distribuir: Android, Web e iOS</div>
+  <div class="meta">
+    <div class="mi"><div class="ml">Duracion</div><div class="mv">1 hora 30 minutos</div></div>
+    <div class="mi"><div class="ml">Proyecto</div><div class="mv">app_vehiculos (version final)</div></div>
+    <div class="mi"><div class="ml">Requisito</div><div class="mv">Clase 5 completada</div></div>
+    <div class="mi"><div class="ml">Docente</div><div class="mv">Ing. Rolando Gonzales Cespedes</div></div>
+  </div>
+</div>
+
+<div class="cont">
+
+  <div class="sec">
+    <h2><span class="ns">1</span>Objetivo de la Clase</h2>
+    <p>Esta es la clase de cierre del modulo. Se compila la app en dos formatos reales: un APK para instalar en celulares Android y una version Web para abrir en el navegador sin Flutter instalado. Tambien se explica el proceso para iOS.</p>
+    <ul>
+      <li>Configurar el <code>AndroidManifest.xml</code> con los permisos necesarios para Android.</li>
+      <li>Cambiar la URL del servidor para que el celular fisico pueda conectarse a XAMPP.</li>
+      <li>Compilar el APK con <code>flutter build apk --release</code> e instalarlo en un celular Android real.</li>
+      <li>Compilar para Web con <code>flutter build web --release</code> y publicar en XAMPP.</li>
+      <li>Entender que se necesita para compilar para iOS y las alternativas gratuitas disponibles.</li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <div class="sec">
+    <h2><span class="ns">2</span>Preparar el AndroidManifest.xml</h2>
+    <p>Abrir el archivo <code>android/app/src/main/AndroidManifest.xml</code> en VS Code. Hay que agregar dos cosas: el permiso de internet y el atributo que permite conexiones HTTP sin cifrado.</p>
+
+    <h3>2.1 Permiso de internet</h3>
+    <p>Agregar esta linea justo antes de la etiqueta <code>&lt;application</code>:</p>
+    <div class="bloque st">
+      <pre>&lt;uses-permission android:name="android.permission.INTERNET" /&gt;</pre>
+    </div>
+
+    <h3>2.2 Permitir trafico HTTP (cleartext)</h3>
+    <p>Desde Android 9 el sistema bloquea por defecto las conexiones HTTP sin cifrado. XAMPP usa HTTP, no HTTPS. Sin este atributo la app compila pero al abrirla no puede conectarse al servidor y muestra error de red.</p>
+    <p>Buscar la etiqueta <code>&lt;application</code> que ya existe en el archivo y agregar el atributo <code>android:usesCleartextTraffic="true"</code>:</p>
+
+    <div class="bloque">
+      <div class="ct">xml &mdash; android/app/src/main/AndroidManifest.xml</div>
+      <pre>&lt;manifest xmlns:android=
+    "http://schemas.android.com/apk/res/android"&gt;
+
+    &lt;!-- Permiso de internet: obligatorio para llamadas HTTP --&gt;
+    &lt;uses-permission android:name=
+        "android.permission.INTERNET" /&gt;
+
+    &lt;application
+        android:label="app_vehiculos"
+        android:name="${applicationName}"
+        android:icon="@mipmap/ic_launcher"
+        android:usesCleartextTraffic="true"&gt;
+        &lt;!-- El resto del contenido no cambia --&gt;</pre>
+    </div>
+
+    <div class="caja ce">
+      <strong>Por que Android bloquea HTTP por defecto</strong>
+      <p>Desde Android 9 (API 28) el sistema operativo protege al usuario bloqueando conexiones HTTP sin cifrado en redes publicas inseguras. El atributo <code>usesCleartextTraffic="true"</code> desactiva esta proteccion para permitir la conexion al servidor local durante el desarrollo. En un proyecto real de produccion el servidor deberia usar HTTPS y este atributo no seria necesario.</p>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="sec">
+    <h2><span class="ns">3</span>Cambiar la URL para el celular fisico</h2>
+    <p>Durante el curso se usaba <code>localhost</code> porque Flutter corria en Chrome en la misma computadora que XAMPP. Un celular fisico es un dispositivo diferente en la red. Cuando el celular escribe <code>localhost</code> se refiere a si mismo, no a la computadora donde esta XAMPP. Hay que usar la IP real de la computadora.</p>
+
+    <h3>3.1 Obtener la IP de la computadora</h3>
+    <p>Abrir el menu Inicio en Windows, buscar <strong>CMD</strong> y ejecutar:</p>
+    <div class="bloque st">
+      <pre>ipconfig</pre>
+    </div>
+    <p>Buscar la seccion <strong>Adaptador de LAN inalambrica WiFi</strong> y copiar el valor de <strong>Direccion IPv4</strong>. Ejemplo: <code>192.168.1.15</code>. El celular debe estar conectado a la misma red WiFi que la computadora.</p>
+
+    <h3>3.2 Actualizar api_service.dart</h3>
+    <p>Abrir <code>lib/api_service.dart</code> y comentar la opcion activa actual, luego descomentar y editar la opcion de IP local:</p>
+
+    <div class="bloque">
+      <div class="ct">dart &mdash; lib/api_service.dart (seccion de configuracion de URL)</div>
+      <pre><span class="c">// Comentar la opcion que estaba activa (localhost):</span>
+<span class="c">// static const String _baseUrl =</span>
+<span class="c">//     'http://localhost:8080/vehiculos_api';</span>
+
+<span class="c">// Activar esta opcion con la IP real de la computadora:</span>
+<span class="k">static</span> <span class="k">const</span> <span class="t">String</span> _baseUrl =
+    <span class="s">'http://192.168.1.X:8080/vehiculos_api'</span>;
+<span class="c">// Reemplazar 192.168.1.X con la IP real de ipconfig.</span>
+<span class="c">// Cambiar 8080 por 80 si XAMPP usa el puerto 80.</span></pre>
+    </div>
+
+    <div class="caja ca">
+      <strong>El celular y la computadora deben estar en la misma red WiFi</strong>
+      <p>Si el celular usa datos moviles y la computadora usa WiFi, la conexion no funciona aunque la IP este correcta. Ambos deben estar conectados al mismo router WiFi. Verificar esto antes de compilar.</p>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="sec">
+    <h2><span class="ns">4</span>Compilar el APK para Android</h2>
+    <p>Con el <code>AndroidManifest.xml</code> configurado y la URL actualizada, abrir el menu <strong>Terminal</strong> en VS Code, clic en <strong>New Terminal</strong> y ejecutar:</p>
+
+    <div class="bloque">
+      <div class="ct">terminal</div>
+      <pre>flutter build apk --release</pre>
+    </div>
+
+    <p>La primera compilacion tarda entre 2 y 5 minutos. Al terminar muestra un mensaje similar a:</p>
+    <div class="bloque st">
+      <pre>Built build/app/outputs/flutter-apk/app-release.apk (18.2MB).</pre>
+    </div>
+
+    <h3>4.1 Ubicar el archivo APK</h3>
+    <p>Abrir el Explorador de Windows y navegar a la carpeta del proyecto. El APK se encuentra en:</p>
+    <div class="bloque st">
+      <pre>build/app/outputs/flutter-apk/app-release.apk</pre>
+    </div>
+
+    <h3>4.2 Instalar en el celular Android</h3>
+    <ol>
+      <li>Compartir el archivo <code>app-release.apk</code> al celular por WhatsApp, cable USB o Google Drive.</li>
+      <li>En el celular abrir <strong>Ajustes</strong> y buscar <strong>Seguridad</strong> o <strong>Aplicaciones</strong>. Activar la opcion <strong>Instalar apps de fuentes desconocidas</strong> o <strong>Permitir esta fuente</strong>.</li>
+      <li>Abrir el archivo APK desde el administrador de archivos del celular. Android muestra una advertencia de seguridad. Tocar <strong>Instalar de todas formas</strong>.</li>
+      <li>La app aparece en el inicio del celular con el nombre <strong>App Vehiculos</strong>.</li>
+      <li>Abrir la app y verificar que la lista de vehiculos carga desde el servidor XAMPP.</li>
+    </ol>
+
+    <div class="caja co">
+      <strong>Verificar que XAMPP esta accesible desde el celular</strong>
+      <p>Antes de abrir la app en el celular, abrir el navegador del celular y escribir la URL del servidor directamente: <code>http://192.168.1.X:8080/vehiculos_api/get_vehiculos.php</code>. Si aparece el JSON con los vehiculos, el celular puede alcanzar el servidor y la app funcionara. Si no aparece nada, verificar que ambos dispositivos estan en la misma red WiFi y que el firewall de Windows no bloquea el puerto de XAMPP.</p>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="sec">
+    <h2><span class="ns">5</span>Compilar para Web</h2>
+
+    <div class="caja ca">
+      <strong>Cambiar la URL de vuelta a localhost antes de compilar Web</strong>
+      <p>La version Web corre en el mismo navegador de la computadora donde esta XAMPP. Hay que volver a activar la opcion de <code>localhost</code> en <code>api_service.dart</code> antes de ejecutar <code>flutter build web</code>. Si se compila con la IP del celular la version Web apunta a esa IP en lugar de localhost.</p>
+    </div>
+
+    <div class="bloque">
+      <div class="ct">dart &mdash; lib/api_service.dart (revertir a localhost para compilar Web)</div>
+      <pre><span class="c">// Volver a activar localhost para la version Web:</span>
+<span class="k">static</span> <span class="k">const</span> <span class="t">String</span> _baseUrl =
+    <span class="s">'http://localhost:8080/vehiculos_api'</span>;</pre>
+    </div>
+
+    <p>Luego compilar:</p>
+    <div class="bloque">
+      <div class="ct">terminal</div>
+      <pre>flutter build web --release</pre>
+    </div>
+
+    <p>El resultado se genera en la carpeta <code>build/web/</code> del proyecto.</p>
+
+    <h3>5.1 Publicar en XAMPP</h3>
+    <ol>
+      <li>Abrir el Explorador de Windows y navegar a la carpeta <code>build/web/</code> del proyecto.</li>
+      <li>Copiar toda la carpeta <code>web</code> dentro de <code>C:/xampp/htdocs/</code>.</li>
+      <li>Renombrar la carpeta copiada a <code>app_vehiculos_web</code>.</li>
+      <li>Abrir Chrome y escribir: <code>http://localhost:8080/app_vehiculos_web</code></li>
+      <li>La app se abre en el navegador sin necesitar <code>flutter run</code>. Es la version de produccion.</li>
+    </ol>
+
+    <div class="caja ci">
+      <strong>Diferencia entre flutter run y flutter build web</strong>
+      <p><code>flutter run -d chrome</code> ejecuta la app en modo debug con el servidor de desarrollo de Flutter activo. <code>flutter build web</code> genera archivos estaticos optimizados que funcionan en cualquier servidor web sin necesitar Flutter instalado. Son dos cosas distintas: una es para desarrollar, la otra es para distribuir.</p>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="sec">
+    <h2><span class="ns">6</span>iOS: que se necesita (solo explicativo)</h2>
+    <p>No hay practica en esta seccion. Es informacion para que el estudiante sepa que se necesita si en el futuro quiere publicar la app en iPhone.</p>
+
+    <h3>Requisitos obligatorios sin excepcion</h3>
+    <table>
+      <thead><tr><th style="width:25%">Requisito</th><th>Detalle</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Una Mac</strong></td>
+          <td>MacBook Air, MacBook Pro, Mac Mini o iMac. No hay forma oficial de compilar para iOS desde Windows o Linux. Es una decision de Apple, no una limitacion de Flutter.</td>
+        </tr>
+        <tr>
+          <td><strong>macOS actualizado</strong></td>
+          <td>Apple exige que Xcode solo funcione en las ultimas versiones de macOS. Si el macOS esta desactualizado, Xcode no se instala.</td>
+        </tr>
+        <tr>
+          <td><strong>Xcode</strong></td>
+          <td>La herramienta de desarrollo de Apple. Se descarga gratis desde la Mac App Store pero ocupa aproximadamente 15 GB de almacenamiento.</td>
+        </tr>
+        <tr>
+          <td><strong>Cuenta Apple Developer</strong></td>
+          <td>Gratuita para probar la app en tu propio iPhone por cable. 99 USD al anno para publicar en la App Store y distribuir a otros usuarios.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>El comando (requiere Mac con Xcode)</h3>
+    <div class="bloque st">
+      <pre>flutter build ios --release</pre>
+    </div>
+
+    <h3>Alternativas gratuitas sin Mac</h3>
+    <table>
+      <thead><tr><th style="width:25%">Servicio</th><th style="width:20%">Costo</th><th>Como funciona</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Codemagic</strong></td>
+          <td>Gratuito 500 min/mes</td>
+          <td>Especializado en Flutter. Se conecta al repositorio de GitHub y compila automaticamente en una Mac real en sus servidores. Es la opcion mas simple para estudiantes. La primera compilacion tarda entre 15 y 20 minutos.</td>
+        </tr>
+        <tr>
+          <td><strong>GitHub Actions</strong></td>
+          <td>Gratuito para repos publicos</td>
+          <td>Se configura un archivo YAML que define los pasos de compilacion. GitHub ejecuta ese proceso en una maquina Mac virtual. Requiere mas configuracion inicial que Codemagic.</td>
+        </tr>
+        <tr>
+          <td><strong>Bitrise</strong></td>
+          <td>Plan gratuito limitado</td>
+          <td>Plataforma de CI/CD movil con soporte para Flutter. El plan gratuito permite compilaciones con tiempos de espera mayores.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="caja co">
+      <strong>Lo que SI pueden hacer los usuarios de iPhone sin Mac</strong>
+      <p>Abrir la version Web compilada en el paso anterior desde Safari o Chrome del iPhone escribiendo la URL del servidor. No es una app nativa instalada desde la App Store pero es completamente funcional para demostrar el proyecto.</p>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="sec">
+    <h2><span class="ns">7</span>Problemas Frecuentes</h2>
+    <table>
+      <thead><tr><th style="width:45%">Problema</th><th>Solucion</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>El APK compila pero al abrirlo en el celular no carga los vehiculos y muestra error de red.</td>
+          <td>Verificar en orden: que XAMPP tiene Apache y MySQL en verde, que la IP en <code>api_service.dart</code> es la correcta (verificar con <code>ipconfig</code>), y que el celular y la computadora estan en la misma red WiFi. Probar abriendo la URL del servidor en el navegador del celular.</td>
+        </tr>
+        <tr>
+          <td>Android bloquea la instalacion del APK con un mensaje de seguridad.</td>
+          <td>Es el comportamiento normal de Android al instalar apps fuera de la Play Store. Ir a Ajustes del celular y activar la opcion de instalar apps de fuentes desconocidas. La ubicacion exacta varia segun la marca del celular: puede estar en Seguridad, en Aplicaciones o en Privacidad.</td>
+        </tr>
+        <tr>
+          <td>La version Web en XAMPP abre pero muestra error al cargar los datos.</td>
+          <td>Verificar que la URL en <code>api_service.dart</code> estaba en <code>localhost</code> al momento de ejecutar <code>flutter build web</code>. Si se compilo con la IP del celular, la version Web no puede conectarse. Corregir la URL y volver a compilar.</td>
+        </tr>
+        <tr>
+          <td>Error durante la compilacion: <em>Gradle task assembleRelease failed</em>.</td>
+          <td>Problema de configuracion de Android. Verificar que el archivo <code>AndroidManifest.xml</code> no tiene errores de sintaxis en los cambios que se hicieron. Abrir el archivo y verificar que todas las etiquetas XML estan correctamente cerradas.</td>
+        </tr>
+        <tr>
+          <td>El firewall de Windows bloquea la conexion desde el celular al servidor XAMPP.</td>
+          <td>Abrir el Panel de Control de Windows, ir a Sistema y Seguridad, Firewall de Windows Defender y agregar una regla de entrada para el puerto 80 o 8080 segun el puerto de XAMPP. Alternativamente desactivar temporalmente el firewall para la red privada.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+<div class="pie">
+  <strong>Fin del modulo: Proyecto de Aplicaciones Moviles con Flutter</strong>
+  Se construyo una app completa conectada a una API REST real, compilable para Android, Web e iOS, con un solo codigo fuente en Dart.
+</div>
+
+</body>
+</html>
