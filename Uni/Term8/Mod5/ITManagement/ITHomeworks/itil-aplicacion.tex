@@ -1,0 +1,65 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{enumitem}
+\usepackage{geometry}
+\geometry{a4paper, margin=2.5cm}
+
+\title{Aplicación de Principios ITIL 4\\Desarrollo de E-commerce y Plataforma Cloud}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Introducción}
+
+ITIL 4 define 7 principios guía que pueden aplicarse a cualquier iniciativa tecnológica. A continuación se analiza su aplicación en dos proyectos: un sistema de comercio electrónico y una plataforma de análisis de datos en la nube.
+
+\section{Desarrollo de un sistema de comercio electrónico (E-commerce)}
+
+\subsection{Focus on value}
+Cada funcionalidad del e-commerce debe alinearse directamente con la generación de valor para el cliente final y el negocio. Por ejemplo, un motor de búsqueda eficiente, un proceso de checkout simplificado y recomendaciones personalizadas deben priorizarse sobre características superfluas. Las decisiones de diseño deben responder a: ¿esto ayuda al usuario a comprar más rápido? ¿esto incrementa la conversión?
+
+\subsection{Start where you are}
+Antes de desarrollar desde cero, se debe evaluar la infraestructura comercial existente: integraciones con pasarelas de pago actuales, sistemas ERP y CRM ya implementados, catálogos de productos heredados y datos históricos de clientes. Reutilizar estos componentes acelera la entrega y reduce costos.
+
+\subsection{Progress iteratively with feedback}
+El e-commerce debe desarrollarse en sprints cortos, liberando funcionalidades incrementales (catálogo, carrito, checkout, pagos) y recolectando feedback de usuarios reales mediante pruebas A/B y métricas de conversión. Esto permite ajustar la experiencia de compra antes de invertir en funcionalidades completas.
+
+\subsection{Collaborate and promote visibility}
+El desarrollo requiere colaboración cercana entre equipos de frontend, backend, seguridad, marketing y operaciones. Se deben establecer tableros visibles con el estado del proyecto, dashboards de rendimiento del sitio y canales de comunicación abiertos entre áreas de negocio y tecnología.
+
+\subsection{Think and work holistically}
+El e-commerce no es solo una tienda online; incluye gestión de inventario, logística, atención al cliente, facturación, seguridad de pagos y cumplimiento normativo (RGPD, PCI DSS). El diseño debe considerar cómo cada subsistema impacta al resto y a la experiencia integral del usuario.
+
+\subsection{Keep it simple and practical}
+La plataforma debe priorizar procesos simples: registro en pocos pasos, checkout sin fricción, búsqueda intuitiva. Evitar sobrecargar la interfaz con opciones innecesarias o flujos burocráticos que aumenten la tasa de abandono del carrito.
+
+\subsection{Optimize and automate}
+Automatizar procesos como confirmaciones de pedido, actualizaciones de inventario, notificaciones de envío y gestión de devoluciones. Optimizar el rendimiento del sitio mediante caché, CDN y compresión de imágenes. Implementar pipelines CI/CD para despliegues ágiles y seguros.
+
+\section{Desarrollo de una plataforma de análisis de datos en la nube}
+
+\subsection{Focus on value}
+La plataforma debe centrarse en ofrecer insights accionables para los usuarios de negocio, no solo en procesar grandes volúmenes de datos. Las funcionalidades (dashboards, alertas, reportes) deben priorizarse según el valor que aportan a la toma de decisiones, evitando almacenar datos sin un propósito claro.
+
+\subsection{Start where you are}
+Evaluar las fuentes de datos existentes: bases de datos transaccionales, data warehouses previos, pipelines ETL heredados y herramientas de BI ya implementadas. Aprovechar la infraestructura cloud existente (AWS, Azure, GCP) en lugar de rediseñar desde cero la arquitectura de datos.
+
+\subsection{Progress iteratively with feedback}
+Implementar la plataforma en fases incrementales: primero un pipeline básico con una fuente de datos y un dashboard simple, luego agregar fuentes adicionales y modelos analíticos más complejos. Validar con usuarios reales si los reportes responden a sus preguntas de negocio antes de expandir.
+
+\subsection{Collaborate and promote visibility}
+El equipo de datos debe colaborar con analistas de negocio, científicos de datos, ingenieros de plataforma y los consumidores finales de los reportes. La visibilidad sobre la calidad de los datos, el linaje de los pipelines y los SLAs de disponibilidad es crítica para la confianza en la plataforma.
+
+\subsection{Think and work holistically}
+Considerar el ecosistema completo: ingesta, almacenamiento, procesamiento, gobierno de datos, seguridad, cumplimiento normativo y visualización. Una decisión en una capa (ej. formato de almacenamiento) afecta el rendimiento en capas superiores. El gobierno de datos y la privacidad deben integrarse desde el diseño.
+
+\subsection{Keep it simple and practical}
+Evitar arquitecturas sobreingenierizadas. Comenzar con soluciones serverless o servicios gestionados (AWS Athena, BigQuery, Snowflake) antes de adoptar infraestructuras complejas como Spark o Kafka si no son estrictamente necesarias. Los dashboards deben ser claros y accionables, no abarrotados de métricas irrelevantes.
+
+\subsection{Optimize and automate}
+Automatizar pipelines de ingesta y transformación, alertas de calidad de datos, escalado automático de recursos compute y la generación de reportes periódicos. Optimizar costos cloud mediante particionamiento, compresión y políticas de ciclo de vida de datos. Implementar infraestructura como código (Terraform, CloudFormation) para entornos reproducibles.
+
+\end{document}
