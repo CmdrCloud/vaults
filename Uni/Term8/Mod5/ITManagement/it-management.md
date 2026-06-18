@@ -246,3 +246,53 @@ version control, and constantly improving processes.
 - Objective
   - continuously evaluate and improve services and processes
     - continuous service improvement
+
+#### Service Value System (SVS)
+
+SVS describes how every component and activity in an org works together to create
+value for clients, users, and other mutually interested areas
+
+**SVS Objective:**
+
+- Transform opportunities and client demands into value.
+  - ...through management and efficient product delivery and services
+
+##### SVS Components
+
+The flow goes like this (top to bottom):
+
+- Opportunity / Demand
+
+- rectoral principles
+  - fundamental recommendations that guide decisions and actions
+
+- governance
+  - norms and politics that direct and control an organisation
+
+- service value cadence
+  - set of key activities that allow you to create value for the client
+
+- practises
+  - practises that help you realise the necessary work to create value
+
+- constant improvement
+  - recurring activity to improve efficiency and efficacy
+
+- Value
+
+#### 4 Dimensions
+
+1. Organisation and People
+2. Information and Technology
+3. Associates and Providers
+4. Value Flows and Processes
+
+#### Outsourcing
+
+Outsourcing consists in hiring an external provider to totally or partially manage
+IT services.
+
+- Total (entire IT department)
+- Partial (infrastructure, technical support, etc.)
+- Offshore (in another country)
+- Onsite (on the client's physical installations)
