@@ -247,7 +247,7 @@ version control, and constantly improving processes.
   - continuously evaluate and improve services and processes
     - continuous service improvement
 
-#### Service Value System (SVS)
+### Service Value System (SVS)
 
 SVS describes how every component and activity in an org works together to create
 value for clients, users, and other mutually interested areas
@@ -257,7 +257,7 @@ value for clients, users, and other mutually interested areas
 - Transform opportunities and client demands into value.
   - ...through management and efficient product delivery and services
 
-##### SVS Components
+#### SVS Components
 
 The flow goes like this (top to bottom):
 
@@ -280,14 +280,14 @@ The flow goes like this (top to bottom):
 
 - Value
 
-#### 4 Dimensions
+### 4 Dimensions
 
 1. Organisation and People
 2. Information and Technology
 3. Associates and Providers
 4. Value Flows and Processes
 
-#### Outsourcing
+### Outsourcing
 
 Outsourcing consists in hiring an external provider to totally or partially manage
 IT services.
@@ -296,3 +296,42 @@ IT services.
 - Partial (infrastructure, technical support, etc.)
 - Offshore (in another country)
 - Onsite (on the client's physical installations)
+
+#### Disadvantages of Outsourcing
+
+- Loss of control
+- Security risks
+- Communication problems
+- Provider dependency
+- Variable service quality
+- Loss of internal knowledge
+
+### Characteristics and Certifications
+
+**Characteristics:**
+
+- Contracts based on SLA (Service Level Agreement)
+- Client-provider relationship management
+- Risk control and complying with rules
+
+Relevant certifications:
+
+- ISO/IEC 20000
+- ITIL Foundation
+- COBIT and ISO 27001
+
+### IT Administration
+
+Planning, implementing, operating, and controlling tech resources in an
+organisation to ensure that they support business objectives in an
+efficient, secure, and sustainable manner.
+
+### Planning Delivery, Operation, and IT Service Management Processes
+
+These processes allow you to design and manage services that satisfy
+client needs:
+
+1. Planning: define what tech services the business needs
+2. Delivery: implement changes or new systems with minimum risk
+3. Operation: maintain daily functionality
+4. Continuous Management: evaluate and constantly improve services
