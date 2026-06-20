@@ -335,3 +335,58 @@ client needs:
 2. Delivery: implement changes or new systems with minimum risk
 3. Operation: maintain daily functionality
 4. Continuous Management: evaluate and constantly improve services
+
+#### Planning
+
+**Objective:**
+
+Align services with the business's strategic goals, guaranteeing availability
+and capacity for short and long term projects.
+
+- service portfolio management
+- demand management
+- IT financial management
+- capacity and availability management
+
+#### Delivery
+
+**Objective:**
+
+Guarantee that changes and new implementations in services are made in a
+secure and planned manner, while also trying to mitigate as much negative impact
+as possible.
+
+- change management
+- configuration management (CMDB)
+- liberation and deployment management
+
+#### Operations
+
+**Objective:**
+
+Maintain services functioning adequately. Ensure quick attention to problems
+and provide support to the end user.
+
+- incident management
+- problem management
+- event management
+- access management
+
+#### Continuous Service Improvement
+
+**Objective:**
+
+Constantly review the performance of services and search for improvements.
+
+- SLA review
+- evaluate process maturity
+- PDCA application
+- user satisfaction surveys and KPI analysis
+
+### Recap 2
+
+- Perspective
+  - financial: reduce operation costs
+  - clients (users): improve client satisfaction
+  - internal processes: optimise incident management
+  - learning and improving: train IT personnel
