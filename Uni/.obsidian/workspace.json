@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "77bd63fc46275d7f",
@@ -185,7 +184,7 @@
       "bases:Create new base": false
     }
   },
-  "active": "821dd211e48d9d91",
+  "active": "dab274f056575646",
   "lastOpenFiles": [
     "Term8/Mod4/IP-and-convergent-networks/convergentnetworks.md",
     "Term8/Mod4/IP-and-convergent-networks/calculations.md",
