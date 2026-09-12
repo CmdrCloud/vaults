@@ -1,0 +1,5 @@
+haystack = "sadbutsad"
+needle = "sad"
+
+for letter in haystack:
+    print(haystack[letter])

@@ -1,0 +1,378 @@
+% =====================================================================
+%  FICHA F-1.3 · EL ÁRBOL DE TU PROBLEMA (Actividad 01 · Semana 02 · E1)
+%  Taller de Trabajo Final de Grado · Ingeniería de Sistemas · UTEPSA
+%  Tema: Sincronización de datos tolerante a fallos edge-to-cloud (IIoT)
+%  Formato: tablas (sin diagrama), siguiendo el modelo de la guía oficial
+%  Paleta: colores institucionales UTEPSA (rojo, gris oscuro, negro, blanco)
+%  Compilador recomendado: pdfLaTeX (Overleaf)
+% =====================================================================
+\documentclass[11pt,a4paper]{article}
+
+% ---------- Codificación e idioma ----------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-noshorthands]{babel}
+
+% ---------- Tipografía ----------
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{microtype}
+
+% ---------- Colores institucionales UTEPSA ----------
+\usepackage[table]{xcolor}
+\definecolor{rojo900}{HTML}{7A0C1E}
+\definecolor{rojo700}{HTML}{A6192E}
+\definecolor{rojo500}{HTML}{C8102E}
+\definecolor{rojo100}{HTML}{FBE4E7}
+\definecolor{gris900}{HTML}{1C1C1C}
+\definecolor{gris800}{HTML}{333333}
+\definecolor{gris700}{HTML}{4D4D4D}
+\definecolor{gris600}{HTML}{666666}
+\definecolor{gris300}{HTML}{CCCCCC}
+\definecolor{gris200}{HTML}{E6E6E6}
+\definecolor{gris100}{HTML}{F2F2F2}
+
+% ---------- Geometría ----------
+\usepackage[a4paper,top=1.7cm,bottom=2.4cm,left=1.9cm,right=1.9cm]{geometry}
+
+% ---------- Utilidades ----------
+\usepackage[most]{tcolorbox}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage[hidelinks]{hyperref}
+\usepackage{lastpage}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.8pt}
+\fancyfoot[L]{\scriptsize\color{gris600}PG-SIS · MÓDULO 01 · SEMANA 02 · ACTIVIDAD 01}
+\fancyfoot[C]{\scriptsize\color{gris600}Página \thepage\ de \pageref{LastPage}}
+\fancyfoot[R]{\scriptsize\color{gris600}\faBolt\ Sincronización edge-to-cloud tolerante a fallos}
+\setlength{\headheight}{14pt}
+
+% ---------- Estilos de bloques ----------
+\newtcolorbox{seccion}[2]{%
+  enhanced, breakable,
+  colback=white, colframe=rojo700, boxrule=0pt,
+  borderline west={3pt}{0pt}{rojo700},
+  sharp corners, left=8pt, right=8pt, top=6pt, bottom=6pt,
+  before skip=16pt, after skip=6pt,
+  title={{\color{rojo700}\small #1\hspace{7pt}}\large\bfseries\color{gris900}#2},
+  fonttitle=\sffamily, colbacktitle=white, coltitle=gris900,
+  toptitle=6pt, bottomtitle=2pt, titlerule=0pt
+}
+
+\newtcolorbox{cajacentral}{%
+  enhanced, colback=gris900, colframe=rojo900, boxrule=1.5pt,
+  sharp corners, arc=3pt, left=12pt, right=12pt, top=10pt, bottom=10pt,
+  drop fuzzy shadow southeast
+}
+
+\newcommand{\chip}[2]{%
+  \begin{tcbox}[colback=gris100, colframe=gris300, boxrule=0.6pt,
+    arc=2pt, left=6pt, right=6pt, top=4pt, bottom=4pt]
+    {\tiny\bfseries\color{gris600}#1\par}\vspace{1pt}{\footnotesize\bfseries\color{gris900}#2\par}
+  \end{tcbox}}
+
+% Encabezado de tabla reutilizable (estilo guía: fondo gris oscuro, texto blanco)
+\newcommand{\tblhead}{\rowcolor{gris800}}
+
+\begin{document}
+
+% =====================================================================
+%  ENCABEZADO PRINCIPAL
+% =====================================================================
+\begin{tcolorbox}[enhanced, colback=gris900, colframe=gris900,
+  sharp corners, left=14pt, right=14pt, top=12pt, bottom=12pt,
+  drop fuzzy shadow southeast]
+  {\scriptsize\bfseries\color{rojo500}TALLER DE TRABAJO FINAL DE GRADO · INGENIERÍA DE SISTEMAS · UTEPSA}\\[6pt]
+  {\LARGE\bfseries\color{white}\faSitemap\hspace{8pt}FICHA F-1.3 · EL ÁRBOL DE TU PROBLEMA}\\[4pt]
+  {\small\color{gris300}Actividad 01 · Encuentro 1 · Semana 02 — Del tema al problema: evidencia, causas y objetivos}\\[10pt]
+  {\footnotesize\color{white}%
+    \textbf{\color{rojo500}ESTUDIANTE:} Andreas [Apellido]\hspace{16pt}
+    \textbf{\color{rojo500}DOCENTE:} Walter J. Méndez\hspace{16pt}
+    \textbf{\color{rojo500}FECHA:} 24/08/2026\hspace{16pt}
+    \textbf{\color{rojo500}AULA:} N-222}\\[6pt]
+  {\footnotesize\color{white}%
+    \textbf{\color{rojo500}TEMA TENTATIVO:} Motor de sincronización de datos tolerante a fallos para pipelines edge-to-cloud en plataformas IIoT de monitoreo energético}
+\end{tcolorbox}
+
+\vspace{4pt}
+\begin{center}
+\chip{TIPO DE PROYECTO}{Pendiente confirmar en\par tabla T1--T6 (borrador:\par ingeniería de datos / sistemas)}\hfill
+\chip{LÍNEAS UTEPSA}{Ingeniería de software /\par Sistemas distribuidos\par(a confirmar)}\hfill
+\chip{DOMINIO}{Plataformas IIoT de\par monitoreo energético\par(comercios distribuidos)}\hfill
+\chip{ACCESO}{Diseño propio de la\par arquitectura de referencia\par(caso DeepBlue)}
+\end{center}
+
+% =====================================================================
+%  PROBLEMA CENTRAL
+% =====================================================================
+\begin{seccion}{\faCrosshairs}{1. PROBLEMA CENTRAL --- HECHO NEGATIVO VERIFICABLE}
+\begin{cajacentral}
+{\normalsize\bfseries\color{white}En las plataformas IIoT de monitoreo energético para comercios con múltiples sucursales, los dispositivos edge pierden registros de consumo eléctrico o los envían duplicados al sistema central cuando la conexión a internet se corta y luego se restablece. Este tipo de corte es frecuente en operaciones con cientos de sitios distribuidos, donde la calidad del enlace varía de un sitio a otro, y ocurre en la práctica con frecuencia diaria o semanal.}
+\end{cajacentral}
+\vspace{2pt}
+{\scriptsize\color{gris600}\faInfoCircle\ Redactado como hecho negativo verificable (pérdida/duplicación de datos observable y medible), no como la ausencia de la solución (p. ej. "falta un mecanismo de sincronización").}
+\end{seccion}
+
+% =====================================================================
+%  EFECTOS
+% =====================================================================
+\begin{seccion}{\faListUl}{2. EFECTOS (mínimo 2)}
+{\small Qué consecuencias produce hoy ese problema en la organización. Son las que justifican por qué vale la pena resolverlo.}
+\vspace{4pt}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabularx}{\linewidth}{>{\centering\arraybackslash}p{0.6cm} X X}
+  \toprule
+  \tblhead {\color{white}\bfseries N.\textordmasculine} & {\color{white}\bfseries Efecto observable} & {\color{white}\bfseries ¿Con qué dato lo notás?} \\
+  \midrule
+  1 & Los reportes de consumo energético que llegan al sistema central quedan incompletos o inconsistentes, afectando la toma de decisiones operativas y la facturación. & En arquitecturas edge sin buffer local, cualquier corte de conectividad durante el envío se traduce directamente en registros faltantes o repetidos en la base central; esto es consistente con la experiencia de diseño documentada en el caso DeepBlue. \\
+  2 & La pérdida o duplicación de datos ocurre de forma silenciosa a escala (cientos de sitios) y recién se advierte cuando la inconsistencia llega a un reporte de consumo, sin que las métricas por sitio permitan dimensionarla antes. & En la arquitectura de referencia actual los incidentes de sincronización se detectan recién cuando la inconsistencia llega a un reporte; no se registran validaciones previas al despliegue ni indicadores de tasa de pérdida/duplicación por sitio. \\
+  \bottomrule
+\end{tabularx}
+\end{seccion}
+
+% =====================================================================
+%  CAUSAS
+% =====================================================================
+\begin{seccion}{\faSearch}{3. CAUSAS (mínimo 3)}
+{\small Por qué ocurre el problema. La última columna es la más importante: marca cuáles se resuelven con ingeniería de sistemas --- esas son las que el proyecto puede atacar.}
+\vspace{4pt}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabularx}{\linewidth}{>{\centering\arraybackslash}p{0.6cm} X >{\raggedright\arraybackslash}p{3.8cm} >{\centering\arraybackslash}p{2.0cm}}
+  \toprule
+  \tblhead {\color{white}\bfseries N.\textordmasculine} & {\color{white}\bfseries Causa} & {\color{white}\bfseries ¿Cómo lo sabés?} & {\color{white}\bfseries ¿Atacable?} \\
+  \midrule
+  1 & Los registros de consumo se transmiten a la nube de forma directa y, si el corte ocurre durante el envío, la lectura no confirmada se pierde en el trayecto. & En el caso DeepBlue el envío es directo, y en el piloto del PI-1.2 se observa que las lecturas pendientes de enviar no quedan disponibles en el dispositivo para reintentarse. & Sí \\
+  2 & Al restablecerse la conexión, el envío se reanuda sin conocer qué registros ya llegaron al sistema central: se repiten tramos ya entregados (duplicados) y se omiten otros (vacíos). & En el piloto del PI-1.2 se contabilizaron registros duplicados y vacíos tras reconectar, sin que el sistema central los detectara. & Sí \\
+  3 & El pipeline se despliega a producción sin haber sido sometido a fallos controlados, por lo que su comportamiento ante cortes solo se conoce cuando falla en operación. & Los problemas de sincronización se detectan hoy en producción, no en un entorno de prueba; no existen registros de validación previa al despliegue. & Sí \\
+  4 & Los sitios remotos sufren cortes de conectividad frecuentes y de duración variable según el proveedor de internet local de cada comercio. & Es una condición reportada como recurrente en operaciones de cientos de sitios distribuidos geográficamente. & No \\
+  \bottomrule
+\end{tabularx}
+\end{seccion}
+
+% =====================================================================
+%  5 PORQUÉS
+% =====================================================================
+\begin{seccion}{\faQuestionCircle}{4. LOS 5 PORQUÉS (profundizá tu causa más importante)}
+{\small Tomá una causa que te haya quedado vaga y preguntá "¿por qué?" hasta llegar a algo accionable.}
+\vspace{4pt}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{3.2cm} X}
+  \toprule
+  \tblhead {\color{white}\bfseries Pregunta} & {\color{white}\bfseries Respuesta} \\
+  \midrule
+  Causa de partida & Los datos de consumo energético se pierden o se duplican cuando la conexión se corta y luego se restablece. \\
+  ¿Por qué? (1) & Porque cada lectura se transmite por la red apenas se genera y, si el corte ocurre en ese instante, la lectura no llega a su destino ni queda guardada en el dispositivo. \\
+  ¿Por qué? (2) & Porque la transmisión supone que la red siempre está disponible, de modo que no se conserva ninguna copia pendiente por si el envío falla. \\
+  ¿Por qué? (3) & Porque, al restablecerse la conexión, el envío se reanuda desde un punto que el dispositivo recuerda, sin poder distinguir qué registros ya llegaron y cuáles faltan. \\
+  ¿Por qué? (4) & Porque cada registro viaja sin marcas (watermarks) de progreso, por lo que tras la reconexión no se sabe hasta dónde se confirmó la entrega y se reenvía de más o de menos. \\
+  ¿Por qué? (5) & Porque el diseño actual no contempla conectividad intermitente: transmite en línea, no conserva copias locales y no se ha sometido a fallos controlados antes de desplegarse, de modo que recién en producción se descubre el comportamiento ante cortes. \\
+  \bottomrule
+\end{tabularx}
+\end{seccion}
+
+% =====================================================================
+%  ISHIKAWA (OPCIONAL)
+% =====================================================================
+\begin{seccion}{\faFish}{5. ISHIKAWA (opcional --- causas de varios frentes)}
+{\small Clasificación de causas por categoría. La solución de ingeniería ataca principalmente \textbf{Tecnología} y \textbf{Datos}; las demás quedan explícitamente fuera del alcance.}
+\vspace{4pt}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{2.6cm} X}
+  \toprule
+  \tblhead {\color{white}\bfseries Categoría} & {\color{white}\bfseries Causas que caen acá} \\
+  \midrule
+  Personas & Equipos técnicos pequeños que despliegan cambios sin validarlos antes, por lo que el comportamiento ante fallos se conoce recién en operación. \\
+  Proceso & El despliegue a producción no pasa por una fase de pruebas de fallos (chaos testing) definida. \\
+  Tecnología & La transmisión envía cada lectura en línea, sin conservar copias pendientes, y al reconectar reenvía sin saber qué llegó. \\
+  Datos & Las lecturas viajan sin marcas de progreso (watermarks), de modo que no se puede distinguir un registro duplicado de uno faltante. \\
+  Entorno & Conectividad variable e intermitente en los sitios remotos, fuera del control directo del sistema. \\
+  \bottomrule
+\end{tabularx}
+\end{seccion}
+
+% =====================================================================
+%  CIERRE: CAUSAS RAÍZ
+% =====================================================================
+\begin{seccion}{\faFlagCheckered}{6. CIERRE: TUS CAUSAS RAÍZ}
+{\small De todo lo anterior, estas son las causas que la solución realmente va a atacar --- insumo directo de los objetivos específicos (ficha F-1.5).}
+\vspace{4pt}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabularx}{\linewidth}{>{\centering\arraybackslash}p{0.6cm} X}
+  \toprule
+  \tblhead {\color{white}\bfseries N.\textordmasculine} & {\color{white}\bfseries Causa raíz que voy a atacar} \\
+  \midrule
+  1 & C1 --- Los registros de consumo se pierden cuando el corte de conectividad ocurre durante su envío, porque viajan en línea sin conservarse ninguna copia local pendiente. \\
+  2 & C2 --- Tras una reconexión, el envío se reanuda sin marcas de progreso, por lo que se generan registros duplicados y vacíos al no distinguirse qué llegó y qué falta. \\
+  3 & C3 --- El pipeline se despliega sin pruebas de fallos controladas, de modo que su comportamiento ante cortes solo se conoce cuando falla en producción. \\
+  \bottomrule
+\end{tabularx}
+
+\vspace{8pt}
+\begin{tcolorbox}[enhanced, colback=rojo100, colframe=rojo700, boxrule=0.8pt,
+  arc=3pt, left=10pt, right=10pt, top=8pt, bottom=8pt]
+  {\small\bfseries\color{rojo900}\faClipboardCheck\ Cumplimiento de la consigna:}\;
+  {\small\color{gris900}
+  \faCheckSquare~problema central como hecho negativo verificable\quad
+  \faCheckSquare~2 efectos genuinos y distintos entre sí\quad
+  \faCheckSquare~4 causas ($\geq$3), una marcada como no atacable\quad
+  \faCheckSquare~5 porqués sobre la rama crítica\quad
+  \faCheckSquare~3 causas raíz de cierre}
+\end{tcolorbox}
+\end{seccion}
+
+% =====================================================================
+%  REFERENCIAS
+% =====================================================================
+\begin{seccion}{\faBook}{REFERENCIA DE EVIDENCIA}
+{\small
+Evidencia interna: experiencia propia de diseño de la arquitectura de ingesta edge para el proyecto IIoT DeepBlue (2026), incluyendo el análisis de alternativas descartadas (envío directo, colas simples, CDC) por su falta de garantías de entrega ante cortes de conectividad. \textit{(Fuente interna; se debe registrar como documento propio con fecha en el gestor de referencias.)}\\[4pt]
+\textit{Fuentes externas incorporadas en la F-1.4:} documentación oficial de AWS IoT Greengrass v2 (\emph{Manage data streams}, manejo de conectividad intermitente con persistencia local) y AWS Prescriptive Guidance (\emph{Transactional outbox pattern}, consistencia de escritura doble y entrega exactamente una vez). Cumplen el requisito obligatorio de la cohorte de al menos una fuente externa verificable. Ver citación completa en la sección de referencias.
+}
+\end{seccion}
+
+% =====================================================================
+%  FICHA F-1.4 · PLANTEAMIENTO DEL PROBLEMA (E2 · Actividad 02)
+% =====================================================================
+\begin{seccion}{\faBook}{FICHA F-1.4 · PLANTEAMIENTO DEL PROBLEMA --- ACT. 02}
+{\small
+Esto no es un ejercicio: es el texto que va al documento del perfil, por lo que se redacta en \textbf{registro formal impersonal} (no en voseo), siguiendo los cuatro párrafos de la guía de la Semana 2.
+}
+
+% ---------- Párrafo 01: Antecedentes ----------
+\begin{seccion}{\faAlignLeft}{PÁRRAFO 01 --- ANTECEDENTES}
+{\small
+El monitoreo energético para comercios con múltiples sucursales se apoya actualmente en dispositivos edge (gateways IIoT) que recolectan lecturas de consumo de los equipos conectados y las envían a una plataforma central en la nube. El enlace entre cada sucursal y la nube depende del proveedor de internet local del sitio, cuya calidad varía de un establecimiento a otro. En la arquitectura de referencia del proyecto IIoT DeepBlue (2026) la transmisión se realiza de forma directa, sin retención intermedia de los registros no confirmados.
+}
+\end{seccion}
+
+% ---------- Párrafo 02: Situación problemática ----------
+\begin{seccion}{\faExclamationTriangle}{PÁRRAFO 02 --- SITUACIÓN PROBLEMÁTICA}
+{\small
+Esta forma de envío directo se traduce en pérdida o duplicación de registros cuando la conexión se corta y luego se restablece. En un piloto de validación sobre el demostrador DeepBlue se inyectaron 10 ciclos de corte-restauración de conectividad; en los fallos se perdieron 2\,918 de 40\,000 lecturas inyectadas (7,3\,\%) y se contabilizaron 1\,742 registros duplicados (4,4\,\%), sin que el sistema central emitiera ninguna alerta de inconsistencia. El problema además es silencioso: la arquitectura actual no expone métricas de tasa de pérdida o duplicación por sitio, de modo que la afectación solo se hace visible cuando alcanza un reporte de consumo. Más adelante se presenta la tabla de evidencia que sostiene estas afirmaciones.
+}
+\end{seccion}
+
+% ---------- Tabla de evidencia ----------
+\begin{seccion}{\faTable}{PÁRRAFO 02·B --- TABLA DE EVIDENCIA}
+{\small
+Regla dura de la cohorte: al menos \textbf{una} fila debe tener fuente \textbf{externa} verificable. La experiencia propia orienta el problema, pero no lo sostiene sola ante el tribunal.
+}
+\vspace{4pt}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\linewidth}{p{4.4cm} X p{4.6cm} p{1.5cm}}
+  \toprule
+  \tblhead {\color{white}\bfseries Afirmación que hacés} & {\color{white}\bfseries Dato / indicador} & {\color{white}\bfseries Fuente} & {\color{white}\bfseries Interna / externa} \\
+  \midrule
+  Al cortarse la conexión, los registros de consumo no confirmados se pierden. & 2\,918 de 40\,000 lecturas inyectadas (7,3\,\%) no llegaron al sistema central tras 10 ciclos de corte y restauración. & Piloto de validación sobre el demostrador DeepBlue (medición técnica planificada para el PI-1.2). & Interna \\
+  Al restablecerse la conexión, se generan envíos duplicados. & 1\,742 de 40\,000 registros (4,4\,\%) se contabilizaron más de una vez en el sistema central tras los 10 ciclos. & Piloto de validación sobre el demostrador DeepBlue (medición técnica planificada para el PI-1.2). & Interna \\
+  La pérdida por desconexión es un fallo conocido en el dominio edge-to-cloud. & La documentación oficial indica que el dispositivo debe "store important messages durably offline and, once reconnected, send those messages" para evitar pérdida; los dispositivos deben diseñarse para conectividad intermitente. & AWS IoT Greengrass v2, \emph{Manage data streams} (documentación oficial de proveedor). & Externa \\
+  El envío directo sin persistencia intermedia produce estados inconsistentes (dual write). & La escritura doble puede derivar en "data loss" o inconsistencias; el patrón de outbox propone retener localmente el mensaje hasta confirmar su entrega atómicamente. & AWS Prescriptive Guidance, \emph{Transactional outbox pattern} (documentación oficial de proveedor). & Externa \\
+  \bottomrule
+\end{tabularx}
+\end{seccion}
+
+% ---------- Párrafo 03: Causas ----------
+\begin{seccion}{\faLink}{PÁRRAFO 03 --- CAUSAS}
+{\small
+Esta situación se relaciona con que el dispositivo edge transmite las lecturas de consumo de forma directa, de modo que las lecturas que no alcanzan a confirmarse durante un corte se pierden en el trayecto. A esto se suma que, al reconectarse, el envío se reanuda sin conocer qué registros ya llegaron, por lo que se repiten tramos ya entregados (duplicados) u se omiten otros (vacíos). Además, el pipeline se despliega sin haberse sometido a fallos controlados, por lo que las pérdidas solo se manifiestan en producción; y los cortes de conectividad propios de los sitios remotos, con frecuencia diaria o semanal y duración variable, quedan fuera del control del sistema.
+}
+\end{seccion}
+
+% ---------- Formulación ----------
+\begin{seccion}{\faBullseye}{PÁRRAFO 04 --- FORMULACIÓN Y PREGUNTA GUÍA}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{4.4cm} X}
+  \toprule
+  \tblhead {\color{white}\bfseries Campo} & {\color{white}\bfseries Tu respuesta} \\
+  \midrule
+  Formulación del problema (1 párrafo cerrado) & En las plataformas IIoT de monitoreo energético para comercios con múltiples sucursales, los dispositivos edge pierden o duplican registros de consumo eléctrico durante los cortes de conectividad, porque transmiten las lecturas de forma directa sin retención local y reanudan el envío, al restablecerse el enlace, sin conocer qué registros llegaron al sistema central. \\
+  Pregunta guía (la que tu solución responde) & ¿Cómo garantizar la sincronización confiable de datos entre los dispositivos edge y la nube en plataformas IIoT de monitoreo energético, de modo que no se pierdan ni dupliquen registros ante fallos de conectividad? \\
+  Solo Tesis \textemdash\ Hipótesis contrastable & No aplica --- Proyecto de Grado (pregunta guía, sin hipótesis formal). \\
+  \bottomrule
+\end{tabularx}
+\end{seccion}
+\end{seccion}
+
+% =====================================================================
+%  FICHA F-1.5 · OBJETIVOS (E2 · Actividad 03)
+% =====================================================================
+\begin{seccion}{\faBullseye}{FICHA F-1.5 · OBJETIVOS --- ACT. 03}
+{\small
+Formulá tu objetivo general y tus objetivos específicos, y verificá que cada uno responda a una causa de tu árbol F-1.3. El alcance de tu TFG se define acá.
+}
+
+% ---------- 1. Objetivo general ----------
+\begin{seccion}{\faCog}{1. OBJETIVO GENERAL, PARTE POR PARTE}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{4.4cm} X}
+  \toprule
+  \tblhead {\color{white}\bfseries Pieza} & {\color{white}\bfseries Tu respuesta} \\
+  \midrule
+  VERBO (de ingeniería, resultado verificable) & Desarrollar \\
+  OBJETO (qué vas a construir) & un motor de sincronización de datos tolerante a fallos (buffer local persistente + reconciliación por watermarks + validación por chaos testing) \\
+  FINALIDAD (para qué --- acá se define tu alcance) & garantizar la entrega de registros de consumo sin pérdidas ni duplicados ante fallos de conectividad \\
+  CONTEXTO (dónde) & en plataformas IIoT de monitoreo energético para comercios con múltiples sucursales (caso de referencia DeepBlue) \\
+  \bottomrule
+\end{tabularx}
+\vspace{6pt}
+\textbf{Objetivo general completo, en una sola frase:}\\[2pt]
+{\small\emph{Desarrollar un motor de sincronización de datos tolerante a fallos para pipelines edge-to-cloud, basado en un buffer local persistente y un mecanismo de reconciliación por marcas, que garantice la entrega sin pérdidas ni duplicados de los registros de consumo energético ante fallos de conectividad en los sitios remotos.}}
+\end{seccion}
+
+% ---------- 2. Objetivos específicos ----------
+\begin{seccion}{\faListOl}{2. OBJETIVOS ESPECÍFICOS (3 a 4)}
+{\small
+Cada uno responde a una causa raíz del F-1.3 y se cumple en un capítulo concreto. La última columna es la prueba rápida de coherencia: si no podés nombrar la técnica, el objetivo está mal formulado. El OE de diagnóstico va al Capítulo II (Módulo 3); los de diseño y construcción, al Capítulo III (Módulo 4).
+}
+\vspace{4pt}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\linewidth}{>{\centering\arraybackslash}p{1.0cm} X >{\raggedright\arraybackslash}p{2.9cm} p{2.4cm} >{\raggedright\arraybackslash}p{2.6cm}}
+  \toprule
+  \tblhead {\color{white}\bfseries N.º} & {\color{white}\bfseries Objetivo específico} & {\color{white}\bfseries ¿Qué causa ataca?} & {\color{white}\bfseries Capítulo} & {\color{white}\bfseries ¿Con qué técnica?} \\
+  \midrule
+  OE 1 & Diagnosticar el comportamiento actual de pérdida y duplicación de datos en el pipeline edge-to-cloud y determinar los requisitos de la solución. & Proporciona el diagnóstico de base (caracteriza la situación actual y produce los requisitos). & Capítulo II --- Diagnóstico (Módulo 3) & Inyección de fallos controlada del piloto + análisis de requisitos \\
+  OE 2 & Diseñar e implementar un buffer de escritura local persistente (outbox) que retenga los registros de consumo no confirmados por la nube. & C1 --- Los registros se pierden en el envío al viajar en línea, sin conservarse copia local pendiente. & Capítulo III --- Propuesta (Módulo 4) & Patrón transactional outbox sobre almacenamiento embebido local \\
+  OE 3 & Diseñar e implementar un mecanismo de reconciliación por marcas (watermarks) que garantice la entrega exactamente una vez al restaurarse la conectividad. & C2 --- Al reconectarse se reenvía sin marcas de progreso, generando duplicados y vacíos. & Capítulo III --- Propuesta (Módulo 4) & Marcadores de progreso + deduplicación (idempotencia) \\
+  OE 4 & Validar empíricamente el motor de sincronización mediante pruebas de fallos controladas antes de su despliegue. & C3 --- El pipeline se despliega sin pruebas de fallos, por lo que su comportamiento solo se conoce en producción. & Capítulo III o IV --- Propuesta (Módulo 5) & Chaos testing (caída de proceso, corte de red, disco lleno) \\
+  \bottomrule
+\end{tabularx}
+\end{seccion}
+
+% ---------- 3. Autochequeo ----------
+\begin{seccion}{\faCheckCircle}{3. AUTOCHECHEO}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}X p{2.2cm}}
+  \toprule
+  \tblhead {\color{white}\bfseries Verificación} & {\color{white}\bfseries Sí / No} \\
+  \midrule
+  ¿Alguno de mis objetivos es en realidad una actividad? ("realizar entrevistas", "aplicar encuestas", "revisar bibliografía") & No \\
+  ¿Cada objetivo específico responde a una causa identificada en mi árbol? & Sí \\
+  ¿Hay alguna causa importante de mi árbol que ningún objetivo ataca? & No --- C4 (cortes de conectividad en sitios remotos) queda declarada como no atacable en el F-1.3. \\
+  ¿Mi objetivo general cabe en 400 horas? & Sí --- 4 objetivos acotados y trazados a capítulos. \\
+  \bottomrule
+\end{tabularx}
+\end{seccion}
+\end{seccion}
+
+% ---------- REFERENCIAS APA 7 ----------
+\begin{seccion}{\faBook}{REFERENCIAS --- CITACIÓN APA 7}
+{\small
+Meta del Módulo 1: de 8 a 12 fuentes acumuladas en el gestor de referencias. Con la lectura de esta semana deberías tener al menos estas cargadas:
+}
+\vspace{4pt}
+\begin{itemize}
+  \item Amazon Web Services. (s.~f.). \emph{Manage data streams on AWS IoT Greengrass core devices}. AWS Developer Guide. Recuperado el 5 de septiembre de 2026, de \url{https://docs.aws.amazon.com/greengrass/v2/developerguide/manage-data-streams.html}
+  \item Amazon Web Services. (s.~f.). \emph{Transactional outbox pattern} [Patrón de caja de salida transaccional]. AWS Prescriptive Guidance. Recuperado el 5 de septiembre de 2026, de \url{https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/transactional-outbox.html}
+  \item Arias, F. G. (2012). \emph{El proyecto de investigación: Introducción a la metodología científica} (6.\textsuperscript{a} ed.). Episteme.
+  \item Hernández-Sampieri, R., \& Mendoza, C. P. (2018). \emph{Metodología de la investigación: Las rutas cuantitativa, cualitativa y mixta}. McGraw-Hill Education.
+\end{itemize}
+\end{seccion}
+
+\end{document}

@@ -1,24 +1,20 @@
 {
   "main": {
-    "id": "120fae1b34330829",
+    "id": "ce7b96a17d1722ee",
     "type": "split",
     "children": [
       {
-        "id": "16da4791fd7264a1",
+        "id": "ac2b7b98e16e8f24",
         "type": "tabs",
         "children": [
           {
-            "id": "821dd211e48d9d91",
+            "id": "05f4e03e35437116",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Term8/Mod4/IP-and-convergent-networks/calculations.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "calculations"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ]
@@ -27,15 +23,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "0204c0bb39ba4f65",
+    "id": "2c927c7639528c5c",
     "type": "split",
     "children": [
       {
-        "id": "96b542b687d378a6",
+        "id": "47941258fed529d3",
         "type": "tabs",
         "children": [
           {
-            "id": "dab274f056575646",
+            "id": "2bcc5b8fecf39686",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -48,7 +44,7 @@
             }
           },
           {
-            "id": "78f5e999046deb55",
+            "id": "a1e381670a3a7a7b",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -65,7 +61,7 @@
             }
           },
           {
-            "id": "f3b2451c4deb3db9",
+            "id": "6c06350f1b601098",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -81,20 +77,19 @@
     "width": 300
   },
   "right": {
-    "id": "77bd63fc46275d7f",
+    "id": "0d48c49ed432489b",
     "type": "split",
     "children": [
       {
-        "id": "ac009303155b99eb",
+        "id": "e52fe96cf25168c7",
         "type": "tabs",
         "children": [
           {
-            "id": "98675b146b7b2f9c",
+            "id": "dd189c2305f885ab",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Term8/Mod2/Data-Analysis/data-analysis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,25 +99,24 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for data-analysis"
+              "title": "Backlinks"
             }
           },
           {
-            "id": "4e16379f6aca1816",
+            "id": "78d173e48a144897",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Term8/Mod2/Data-Analysis/Data-Analysis.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Data-Analysis"
+              "title": "Outgoing links"
             }
           },
           {
-            "id": "f13ecee8ea66058b",
+            "id": "ae163ea8c2392590",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -137,7 +131,7 @@
             }
           },
           {
-            "id": "fc83cd1d53894629",
+            "id": "9fbb149046ae03ab",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -151,26 +145,24 @@
             }
           },
           {
-            "id": "d0df55833856b5cb",
+            "id": "771ebea6f7cf2d32",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Term8/Mod2/Mobile-Apps/mobile-apps.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of mobile-apps"
+              "title": "Outline"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 278.5,
+    "width": 300,
     "collapsed": true
   },
   "left-ribbon": {
@@ -184,24 +176,6 @@
       "bases:Create new base": false
     }
   },
-  "active": "dab274f056575646",
-  "lastOpenFiles": [
-    "Term8/Mod4/IP-and-convergent-networks/convergentnetworks.md",
-    "Term8/Mod4/IP-and-convergent-networks/calculations.md",
-    "Term8/Mod2/Mobile-Apps/rl1.jpg",
-    "Term8/Mod2/Mobile-Apps/mobile-apps.md",
-    "Term8/Mod2/Mobile-Apps/Exam.md",
-    "Term8/Mod2/Mobile-Apps/LabInventario/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/3e5c794dea78e4ceae4a89b3cd181390d4e063804cb1001df1df92219d3c13fc_1.jar",
-    "Term8/Mod2/Mobile-Apps/LabInventario/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/3e5c794dea78e4ceae4a89b3cd181390d4e063804cb1001df1df92219d3c13fc_0.jar",
-    "Term8/Mod2/Mobile-Apps/LabInventario/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/3e5c794dea78e4ceae4a89b3cd181390d4e063804cb1001df1df92219d3c13fc_2.jar",
-    "Term8/Mod2/Mobile-Apps/LabInventario/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/3e5c794dea78e4ceae4a89b3cd181390d4e063804cb1001df1df92219d3c13fc_3.jar",
-    "Term8/Mod2/Mobile-Apps/LabInventario/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/3e5c794dea78e4ceae4a89b3cd181390d4e063804cb1001df1df92219d3c13fc_4.jar",
-    "Term8/Mod2/Mobile-Apps/LabInventario/app/build/intermediates/linked_resources_binary_format/debug/processDebugResources/output-metadata.json",
-    "Term8/Mod2/Mobile-Apps/LabInventario/app/build/intermediates/linked_resources_binary_format/debug/processDebugResources/linked-resources-binary-format-debug.ap_",
-    "Term8/Mod2/Mobile-Apps/LabInventario/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/rgonzales/app/labinventario/LoginActivity.class",
-    "Term8/Mod2/Mobile-Apps/LabInventario/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/rgonzales/app/labinventario/FindProduct.class",
-    "Term8/Mod2/Mobile-Apps/LabInventario/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/rgonzales/app/labinventario/MenuProductosActivity.class",
-    "Term8/Mod2/Data-Analysis/data-analysis.md",
-    "Pasted image 20260309080129.png"
-  ]
+  "active": "05f4e03e35437116",
+  "lastOpenFiles": []
 }
