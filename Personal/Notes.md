@@ -144,3 +144,12 @@ kubectl autoscale deployment php-apache --cpu-load=50
 - pressure makes you stand out
 - know how to demonstrate the knowledge you get from the certificate
 - general AI professional
+
+## Useful info for AI driven development
+
+- spec driven development
+  - speckit and openspec on github
+
+- harness engineering
+  - tell ai to use specific models for browsing tasks/documentations,
+    then other models for coding
