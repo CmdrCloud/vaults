@@ -1,7 +1,9 @@
 [
+  "execute-code",
+  "mermaid-tools",
   "obsidian-excalidraw-plugin",
   "obsidian-git",
   "obsidian-latex-suite",
-  "obsidian-tikzjax",
-  "obsidian-style-settings"
+  "obsidian-style-settings",
+  "obsidian-tikzjax"
 ]
