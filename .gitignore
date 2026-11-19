@@ -4,3 +4,9 @@ venv/
 node_modules/
 __pycache__/
 *.pyc
+# housekeeping 2026-11-18
+Work/DeepBlue/
+Work/DeepBlue.zip
+.obsidian/workspace*.json
+Uni/.obsidian/workspace*.json
+Personal/Self/
