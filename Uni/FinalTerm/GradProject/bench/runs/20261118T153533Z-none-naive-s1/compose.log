@@ -1,0 +1,134 @@
+consumer-1  | 2026-11-18T15:35:37.899023834Z 2026-11-18 15:35:37,898 INFO Connected to TimescaleDB
+consumer-1  | 2026-11-18T15:35:37.900325001Z 2026-11-18 15:35:37,900 INFO Subscribed to telemetry topics
+edge-1      | 2026-11-18T15:35:39.371490002Z 2026-11-18 15:35:39,371 WARNING MQTT CONNECTED
+edge-1      | 2026-11-18T15:35:39.474917002Z 2026-11-18 15:35:39,474 INFO start mode=naive seed=1 resuming at cycle 0/90
+db-1        | 2026-11-18T15:35:35.158125000Z The files belonging to this database system will be owned by user "postgres".
+db-1        | 2026-11-18T15:35:35.158172333Z This user must also own the server process.
+db-1        | 2026-11-18T15:35:35.158174041Z 
+db-1        | 2026-11-18T15:35:35.158174833Z The database cluster will be initialized with locale "en_US.utf8".
+db-1        | 2026-11-18T15:35:35.158175583Z The default database encoding has accordingly been set to "UTF8".
+db-1        | 2026-11-18T15:35:35.158176250Z The default text search configuration will be set to "english".
+db-1        | 2026-11-18T15:35:35.158177000Z 
+db-1        | 2026-11-18T15:35:35.158177625Z Data page checksums are disabled.
+db-1        | 2026-11-18T15:35:35.158192250Z 
+db-1        | 2026-11-18T15:35:35.158196291Z fixing permissions on existing directory /var/lib/postgresql/data ... ok
+db-1        | 2026-11-18T15:35:35.163069000Z creating subdirectories ... ok
+db-1        | 2026-11-18T15:35:35.163087250Z selecting dynamic shared memory implementation ... posix
+db-1        | 2026-11-18T15:35:35.173500291Z selecting default "max_connections" ... 100
+db-1        | 2026-11-18T15:35:35.187368666Z selecting default "shared_buffers" ... 128MB
+db-1        | 2026-11-18T15:35:35.211494666Z selecting default time zone ... UTC
+db-1        | 2026-11-18T15:35:35.212217125Z creating configuration files ... ok
+db-1        | 2026-11-18T15:35:35.315583375Z running bootstrap script ... ok
+db-1        | 2026-11-18T15:35:35.426030666Z sh: locale: not found
+db-1        | 2026-11-18T15:35:35.426049458Z 2026-11-18 15:35:35.425 UTC [35] WARNING:  no usable system locales were found
+db-1        | 2026-11-18T15:35:35.647884875Z performing post-bootstrap initialization ... ok
+db-1        | 2026-11-18T15:35:35.733123625Z initdb: warning: enabling "trust" authentication for local connections
+db-1        | 2026-11-18T15:35:35.733151541Z initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+db-1        | 2026-11-18T15:35:35.733126416Z syncing data to disk ... ok
+db-1        | 2026-11-18T15:35:35.733157083Z 
+db-1        | 2026-11-18T15:35:35.733157750Z 
+db-1        | 2026-11-18T15:35:35.733158416Z Success. You can now start the database server using:
+db-1        | 2026-11-18T15:35:35.733159791Z 
+db-1        | 2026-11-18T15:35:35.733160416Z     pg_ctl -D /var/lib/postgresql/data -l logfile start
+db-1        | 2026-11-18T15:35:35.733161125Z 
+db-1        | 2026-11-18T15:35:35.762790333Z waiting for server to start....2026-11-18 15:35:35.762 UTC [41] LOG:  starting PostgreSQL 17.10 on aarch64-unknown-linux-musl, compiled by gcc (Alpine 15.2.0) 15.2.0, 64-bit
+db-1        | 2026-11-18T15:35:35.763816208Z 2026-11-18 15:35:35.763 UTC [41] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db-1        | 2026-11-18T15:35:35.766413833Z 2026-11-18 15:35:35.766 UTC [44] LOG:  database system was shut down at 2026-11-18 15:35:35 UTC
+db-1        | 2026-11-18T15:35:35.769596416Z 2026-11-18 15:35:35.769 UTC [41] LOG:  database system is ready to accept connections
+db-1        | 2026-11-18T15:35:35.770373083Z 2026-11-18 15:35:35.770 UTC [47] LOG:  TimescaleDB background worker launcher connected to shared catalogs
+db-1        | 2026-11-18T15:35:35.849450625Z  done
+db-1        | 2026-11-18T15:35:35.849481250Z server started
+db-1        | 2026-11-18T15:35:35.883845333Z CREATE DATABASE
+db-1        | 2026-11-18T15:35:35.884279333Z 
+db-1        | 2026-11-18T15:35:35.884288917Z 
+db-1        | 2026-11-18T15:35:35.884289833Z /usr/local/bin/docker-entrypoint.sh: sourcing /docker-entrypoint-initdb.d/000_install_timescaledb.sh
+db-1        | 2026-11-18T15:35:36.006890333Z CREATE EXTENSION
+db-1        | 2026-11-18T15:35:36.129208292Z CREATE EXTENSION
+db-1        | 2026-11-18T15:35:36.129218333Z 2026-11-18 15:35:36.129 UTC [65] ERROR:  background worker "TimescaleDB Background Worker Scheduler for database 1" trying to connect to template database, exiting
+db-1        | 2026-11-18T15:35:36.245182708Z CREATE EXTENSION
+db-1        | 2026-11-18T15:35:36.245440167Z 
+db-1        | 2026-11-18T15:35:36.245446750Z /usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/001_timescaledb_tune.sh
+db-1        | 2026-11-18T15:35:36.249504542Z [37;1mUsing postgresql.conf at this path:
+db-1        | 2026-11-18T15:35:36.249512500Z [0m/var/lib/postgresql/data/postgresql.conf
+db-1        | 2026-11-18T15:35:36.249513292Z 
+db-1        | 2026-11-18T15:35:36.253821458Z [37;1mWriting backup to:
+db-1        | 2026-11-18T15:35:36.253831792Z [0m/tmp/timescaledb_tune.backup202611181535
+db-1        | 2026-11-18T15:35:36.253832792Z 
+db-1        | 2026-11-18T15:35:36.253833542Z [37;1mRecommendations based on 7.75 GB of available memory and 10 CPUs for PostgreSQL 17
+db-1        | 2026-11-18T15:35:36.253857000Z shared_buffers = 1983MB
+db-1        | 2026-11-18T15:35:36.253860417Z effective_cache_size = 5950MB
+broker-1    | 2026-11-18T15:35:35.035937930Z 1795016135: Info: running mosquitto as user: mosquitto.
+broker-1    | 2026-11-18T15:35:35.035975555Z 1795016135: mosquitto version 2.1.2 starting
+broker-1    | 2026-11-18T15:35:35.035976764Z 1795016135: Config loaded from /mosquitto/config/mosquitto.conf.
+broker-1    | 2026-11-18T15:35:35.035977472Z 1795016135: Bridge support available.
+broker-1    | 2026-11-18T15:35:35.035978139Z 1795016135: Persistence support available.
+broker-1    | 2026-11-18T15:35:35.035978764Z 1795016135: TLS support available.
+broker-1    | 2026-11-18T15:35:35.035979597Z 1795016135: TLS-PSK support available.
+broker-1    | 2026-11-18T15:35:35.035980222Z 1795016135: Websockets support available.
+broker-1    | 2026-11-18T15:35:35.036315930Z 1795016135: Opening ipv4 listen socket on port 1883.
+broker-1    | 2026-11-18T15:35:35.036324389Z 1795016135: mosquitto version 2.1.2 running
+broker-1    | 2026-11-18T15:35:37.899640376Z 1795016137: New connection from 172.19.0.4:34671 on port 1883.
+broker-1    | 2026-11-18T15:35:37.899655209Z 1795016137: New client connected from 172.19.0.4:34671 as bench-consumer (p4, c0, k30).
+broker-1    | 2026-11-18T15:35:39.371214293Z 1795016139: New connection from 172.20.0.3:60861 on port 1883.
+broker-1    | 2026-11-18T15:35:39.371256752Z 1795016139: New client connected from 172.20.0.3:60861 as bench-edge-naive (p4, c1, k10).
+db-1        | 2026-11-18T15:35:36.253861375Z maintenance_work_mem = 1015556kB
+db-1        | 2026-11-18T15:35:36.253862125Z work_mem = 6347kB
+db-1        | 2026-11-18T15:35:36.253869417Z timescaledb.max_background_workers = 16
+db-1        | 2026-11-18T15:35:36.253870250Z max_worker_processes = 29
+db-1        | 2026-11-18T15:35:36.253870958Z max_parallel_workers_per_gather = 5
+db-1        | 2026-11-18T15:35:36.253871583Z max_parallel_workers = 10
+db-1        | 2026-11-18T15:35:36.253872208Z wal_buffers = 16MB
+db-1        | 2026-11-18T15:35:36.253872833Z min_wal_size = 512MB
+db-1        | 2026-11-18T15:35:36.253873500Z default_statistics_target = 100
+db-1        | 2026-11-18T15:35:36.253874167Z random_page_cost = 1.1
+db-1        | 2026-11-18T15:35:36.253874833Z checkpoint_completion_target = 0.9
+db-1        | 2026-11-18T15:35:36.253875417Z max_locks_per_transaction = 128
+db-1        | 2026-11-18T15:35:36.253878708Z autovacuum_max_workers = 10
+db-1        | 2026-11-18T15:35:36.253879375Z autovacuum_naptime = 10
+db-1        | 2026-11-18T15:35:36.253880042Z default_toast_compression = lz4
+db-1        | 2026-11-18T15:35:36.253880708Z jit = off
+db-1        | 2026-11-18T15:35:36.253881417Z effective_io_concurrency = 256
+db-1        | 2026-11-18T15:35:36.253882083Z timescaledb.last_tuned = '2026-11-18T15:35:36Z'
+db-1        | 2026-11-18T15:35:36.253882750Z timescaledb.last_tuned_version = '0.19.0'
+db-1        | 2026-11-18T15:35:36.254354083Z [0m[37;1mSaving changes to: /var/lib/postgresql/data/postgresql.conf
+db-1        | 2026-11-18T15:35:36.254360042Z [0m[37;1mRestart PostgreSQL to apply the modified configuration
+db-1        | 2026-11-18T15:35:36.255202333Z 
+db-1        | 2026-11-18T15:35:36.255207958Z /usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/01-schema.sql
+db-1        | 2026-11-18T15:35:36.260418792Z [0mpsql:/docker-entrypoint-initdb.d/01-schema.sql:1: NOTICE:  extension "timescaledb" already exists, skipping
+db-1        | 2026-11-18T15:35:36.260422208Z CREATE EXTENSION
+db-1        | 2026-11-18T15:35:36.263362625Z CREATE TABLE
+db-1        | 2026-11-18T15:35:36.265749125Z    create_hypertable    
+db-1        | 2026-11-18T15:35:36.265762250Z ------------------------
+db-1        | 2026-11-18T15:35:36.265763083Z  (1,public,telemetry,t)
+db-1        | 2026-11-18T15:35:36.265763750Z (1 row)
+db-1        | 2026-11-18T15:35:36.265764833Z 
+db-1        | 2026-11-18T15:35:36.266956625Z CREATE INDEX
+db-1        | 2026-11-18T15:35:36.268770042Z CREATE TABLE
+db-1        | 2026-11-18T15:35:36.270423458Z CREATE TABLE
+db-1        | 2026-11-18T15:35:36.270811000Z 
+db-1        | 2026-11-18T15:35:36.270814417Z 
+db-1        | 2026-11-18T15:35:36.271408583Z waiting for server to shut down....2026-11-18 15:35:36.271 UTC [41] LOG:  received fast shutdown request
+db-1        | 2026-11-18T15:35:36.273122000Z 2026-11-18 15:35:36.272 UTC [41] LOG:  aborting any active transactions
+db-1        | 2026-11-18T15:35:36.273551500Z 2026-11-18 15:35:36.272 UTC [68] FATAL:  terminating background worker "TimescaleDB Background Worker Scheduler" due to administrator command
+db-1        | 2026-11-18T15:35:36.273555292Z 2026-11-18 15:35:36.272 UTC [59] FATAL:  terminating background worker "TimescaleDB Background Worker Scheduler" due to administrator command
+db-1        | 2026-11-18T15:35:36.273556042Z 2026-11-18 15:35:36.273 UTC [47] FATAL:  terminating background worker "TimescaleDB Background Worker Launcher" due to administrator command
+db-1        | 2026-11-18T15:35:36.276696833Z 2026-11-18 15:35:36.276 UTC [41] LOG:  background worker "TimescaleDB Background Worker Scheduler" (PID 68) exited with exit code 1
+db-1        | 2026-11-18T15:35:36.276720125Z 2026-11-18 15:35:36.276 UTC [41] LOG:  background worker "logical replication launcher" (PID 48) exited with exit code 1
+db-1        | 2026-11-18T15:35:36.276855792Z 2026-11-18 15:35:36.276 UTC [41] LOG:  background worker "TimescaleDB Background Worker Scheduler" (PID 59) exited with exit code 1
+db-1        | 2026-11-18T15:35:36.277272125Z 2026-11-18 15:35:36.277 UTC [41] LOG:  background worker "TimescaleDB Background Worker Launcher" (PID 47) exited with exit code 1
+db-1        | 2026-11-18T15:35:36.277408042Z 2026-11-18 15:35:36.277 UTC [42] LOG:  shutting down
+db-1        | 2026-11-18T15:35:36.278067542Z 2026-11-18 15:35:36.278 UTC [42] LOG:  checkpoint starting: shutdown immediate
+db-1        | 2026-11-18T15:35:36.415212583Z 2026-11-18 15:35:36.415 UTC [42] LOG:  checkpoint complete: wrote 1770 buffers (10.8%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.023 s, sync=0.113 s, total=0.138 s; sync files=771, longest=0.014 s, average=0.001 s; distance=9910 kB, estimate=9910 kB; lsn=0/1E9AAA8, redo lsn=0/1E9AAA8
+db-1        | 2026-11-18T15:35:36.421268458Z 2026-11-18 15:35:36.421 UTC [41] LOG:  database system is shut down
+db-1        | 2026-11-18T15:35:36.477587500Z  done
+db-1        | 2026-11-18T15:35:36.477598375Z server stopped
+db-1        | 2026-11-18T15:35:36.478142542Z 
+db-1        | 2026-11-18T15:35:36.478147250Z PostgreSQL init process complete; ready for start up.
+db-1        | 2026-11-18T15:35:36.478149042Z 
+db-1        | 2026-11-18T15:35:36.513296208Z 2026-11-18 15:35:36.513 UTC [1] LOG:  starting PostgreSQL 17.10 on aarch64-unknown-linux-musl, compiled by gcc (Alpine 15.2.0) 15.2.0, 64-bit
+db-1        | 2026-11-18T15:35:36.513325000Z 2026-11-18 15:35:36.513 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db-1        | 2026-11-18T15:35:36.513328292Z 2026-11-18 15:35:36.513 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db-1        | 2026-11-18T15:35:36.515419167Z 2026-11-18 15:35:36.515 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db-1        | 2026-11-18T15:35:36.517526542Z 2026-11-18 15:35:36.517 UTC [88] LOG:  database system was shut down at 2026-11-18 15:35:36 UTC
+db-1        | 2026-11-18T15:35:36.531882542Z 2026-11-18 15:35:36.531 UTC [1] LOG:  database system is ready to accept connections
+db-1        | 2026-11-18T15:35:36.532649417Z 2026-11-18 15:35:36.532 UTC [91] LOG:  TimescaleDB background worker launcher connected to shared catalogs

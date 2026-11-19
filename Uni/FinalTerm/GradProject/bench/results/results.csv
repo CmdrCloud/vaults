@@ -1,0 +1,5 @@
+run_id,scenario,mode,seed,generated,consolidated,lost,duplicates,explicit_loss,recovery_time_s,faults,fault_seconds,cycles,interval_s,started_at,git_hash
+20261118T153533Z-none-naive-s1,none,naive,1,2520,2520,0,0,0,,0,0.0,90,1.0,2026-11-18T15:35:33+00:00,c476334-dirty
+20261118T153721Z-none-engine-s1,none,engine,1,2520,2520,0,0,0,,0,0.0,90,1.0,2026-11-18T15:37:21+00:00,c476334-dirty
+20261118T153918Z-E1-naive-s1,E1,naive,1,2520,2492,28,2,0,,3,27.8,90,1.0,2026-11-18T15:39:18+00:00,c476334-dirty
+20261118T154105Z-E1-engine-s1,E1,engine,1,2520,2520,0,0,0,7.3,3,27.8,90,1.0,2026-11-18T15:41:05+00:00,c476334-dirty

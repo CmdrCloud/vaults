@@ -1,0 +1,16 @@
+{
+  "sites": [
+    {"id": "site-01", "devices": [
+      {"id": "dev-01", "type": "refrigerator"},
+      {"id": "dev-02", "type": "cash_register"}
+    ]},
+    {"id": "site-02", "devices": [
+      {"id": "dev-03", "type": "refrigerator"},
+      {"id": "dev-04", "type": "oven"}
+    ]},
+    {"id": "site-03", "devices": [
+      {"id": "dev-05", "type": "coffee_machine"},
+      {"id": "dev-06", "type": "light"}
+    ]}
+  ]
+}

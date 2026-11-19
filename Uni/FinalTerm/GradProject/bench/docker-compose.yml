@@ -1,0 +1,87 @@
+name: tfg-bench
+
+x-db-env: &db-env
+  POSTGRES_HOST: db
+  POSTGRES_PORT: 5432
+  POSTGRES_DB: bench
+  POSTGRES_USER: bench
+  POSTGRES_PASSWORD: bench-dev-password
+
+services:
+  broker:
+    image: eclipse-mosquitto:2
+    volumes:
+      - ./broker/mosquitto.conf:/mosquitto/config/mosquitto.conf:ro
+    networks: [cloud, uplink]
+
+  db:
+    image: timescale/timescaledb:2.29.0-pg17
+    environment:
+      POSTGRES_DB: bench
+      POSTGRES_USER: bench
+      POSTGRES_PASSWORD: bench-dev-password
+    volumes:
+      - ./schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+      - ./runs:/runs:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U bench -d bench"]
+      interval: 2s
+      retries: 30
+    networks: [cloud]
+
+  consumer:
+    build: ./consumer
+    environment:
+      <<: *db-env
+      MQTT_HOST: broker
+      MODE: ${MODE:-engine}
+    depends_on:
+      db: {condition: service_healthy}
+      broker: {condition: service_started}
+    healthcheck:
+      test: ["CMD", "test", "-f", "/tmp/consumer-ready"]
+      interval: 1s
+      retries: 30
+    networks: [cloud]
+
+  reconciler:
+    build: ./reconciler
+    profiles: [engine]
+    environment:
+      <<: *db-env
+      MQTT_HOST: broker
+      RECONCILE_INTERVAL_SECONDS: ${RECONCILE_INTERVAL_SECONDS:-5}
+      RECONCILE_TOLERANCE_SECONDS: ${RECONCILE_TOLERANCE_SECONDS:-5}
+      BACKFILL_REQUEST_TTL_SECONDS: 30
+    depends_on:
+      db: {condition: service_healthy}
+      broker: {condition: service_started}
+    networks: [cloud]
+
+  # Emulated gateway: ARM64, CPU/RAM capped like the reference gateway (4 cores, 4 GB).
+  edge:
+    build: ./edge
+    platform: linux/arm64
+    cpus: ${EDGE_CPUS:-4}
+    mem_limit: ${EDGE_MEM:-4g}
+    cap_add: [NET_ADMIN]
+    environment:
+      MQTT_HOST: broker
+      MODE: ${MODE:-engine}
+      SEED: ${SEED:-1}
+      CYCLES: ${CYCLES:-120}
+      INTERVAL_SECONDS: ${INTERVAL_SECONDS:-1}
+    volumes:
+      - ./config.json:/app/config.json:ro
+      - edge-data:/data
+      - ${LEDGER_HOST_DIR:-./runs/scratch}:/ledger
+    depends_on:
+      consumer: {condition: service_healthy}
+    networks: [uplink]
+
+networks:
+  cloud:
+  uplink:   # the edge's only link to the cloud; cutting it = link outage
+
+volumes:
+  edge-data:

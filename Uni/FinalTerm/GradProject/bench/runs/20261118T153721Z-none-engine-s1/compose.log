@@ -1,0 +1,196 @@
+db-1          | 2026-11-18T15:37:23.097359550Z The files belonging to this database system will be owned by user "postgres".
+db-1          | 2026-11-18T15:37:23.097400341Z This user must also own the server process.
+db-1          | 2026-11-18T15:37:23.097403008Z 
+consumer-1    | 2026-11-18T15:37:25.953205759Z 2026-11-18 15:37:25,952 INFO Connected to TimescaleDB
+broker-1      | 2026-11-18T15:37:23.175749466Z 1795016243: Info: running mosquitto as user: mosquitto.
+broker-1      | 2026-11-18T15:37:23.175770050Z 1795016243: mosquitto version 2.1.2 starting
+broker-1      | 2026-11-18T15:37:23.175845508Z 1795016243: Config loaded from /mosquitto/config/mosquitto.conf.
+reconciler-1  | 2026-11-18T15:37:25.874880426Z 2026-11-18 15:37:25,874 INFO Connected to TimescaleDB
+broker-1      | 2026-11-18T15:37:23.175852591Z 1795016243: Bridge support available.
+broker-1      | 2026-11-18T15:37:23.175854008Z 1795016243: Persistence support available.
+reconciler-1  | 2026-11-18T15:37:25.876237384Z 2026-11-18 15:37:25,876 INFO MQTT connected, subscribed to backfill responses
+reconciler-1  | 2026-11-18T15:37:25.880511343Z 2026-11-18 15:37:25,880 INFO No sites with data yet; skipping
+reconciler-1  | 2026-11-18T15:37:30.887310470Z 2026-11-18 15:37:30,886 INFO Site site-01: gap-free watermark=0, no gaps
+reconciler-1  | 2026-11-18T15:37:31.090648637Z 2026-11-18 15:37:31,090 INFO Site site-02: gap-free watermark=0, no gaps
+reconciler-1  | 2026-11-18T15:37:31.297358304Z 2026-11-18 15:37:31,297 INFO Site site-03: gap-free watermark=0, no gaps
+reconciler-1  | 2026-11-18T15:37:36.516128125Z 2026-11-18 15:37:36,515 INFO Site site-01: gap-free watermark=36, no gaps
+reconciler-1  | 2026-11-18T15:37:36.723661875Z 2026-11-18 15:37:36,723 INFO Site site-02: gap-free watermark=50, no gaps
+broker-1      | 2026-11-18T15:37:23.175854716Z 1795016243: TLS support available.
+consumer-1    | 2026-11-18T15:37:25.954912676Z 2026-11-18 15:37:25,954 INFO Subscribed to telemetry topics
+edge-1        | 2026-11-18T15:37:27.430285968Z 2026-11-18 15:37:27,430 WARNING MQTT CONNECTED
+edge-1        | 2026-11-18T15:37:27.533299969Z 2026-11-18 15:37:27,532 INFO start mode=engine seed=1 resuming at cycle 0/90
+reconciler-1  | 2026-11-18T15:37:36.926849875Z 2026-11-18 15:37:36,926 INFO Site site-03: gap-free watermark=45, no gaps
+reconciler-1  | 2026-11-18T15:37:42.138140544Z 2026-11-18 15:37:42,137 INFO Site site-01: gap-free watermark=90, no gaps
+reconciler-1  | 2026-11-18T15:37:42.341099128Z 2026-11-18 15:37:42,340 INFO Site site-02: gap-free watermark=100, no gaps
+broker-1      | 2026-11-18T15:37:23.175855341Z 1795016243: TLS-PSK support available.
+db-1          | 2026-11-18T15:37:23.097413550Z The database cluster will be initialized with locale "en_US.utf8".
+broker-1      | 2026-11-18T15:37:23.175856050Z 1795016243: Websockets support available.
+db-1          | 2026-11-18T15:37:23.097422800Z The default database encoding has accordingly been set to "UTF8".
+broker-1      | 2026-11-18T15:37:23.176201091Z 1795016243: Opening ipv4 listen socket on port 1883.
+broker-1      | 2026-11-18T15:37:23.176203966Z 1795016243: mosquitto version 2.1.2 running
+broker-1      | 2026-11-18T15:37:25.875843051Z 1795016245: New connection from 172.19.0.4:52261 on port 1883.
+broker-1      | 2026-11-18T15:37:25.875871176Z 1795016245: New client connected from 172.19.0.4:52261 as bench-reconciler (p4, c1, k60).
+broker-1      | 2026-11-18T15:37:25.953974676Z 1795016245: New connection from 172.19.0.5:59227 on port 1883.
+broker-1      | 2026-11-18T15:37:25.953996176Z 1795016245: New client connected from 172.19.0.5:59227 as bench-consumer (p4, c0, k30).
+broker-1      | 2026-11-18T15:37:27.430011552Z 1795016247: New connection from 172.20.0.3:41303 on port 1883.
+reconciler-1  | 2026-11-18T15:37:42.544198628Z 2026-11-18 15:37:42,543 INFO Site site-03: gap-free watermark=99, no gaps
+broker-1      | 2026-11-18T15:37:27.430073468Z 1795016247: New client connected from 172.20.0.3:41303 as bench-edge-engine (p4, c1, k10).
+reconciler-1  | 2026-11-18T15:37:47.761447589Z 2026-11-18 15:37:47,760 INFO Site site-01: gap-free watermark=144, no gaps
+reconciler-1  | 2026-11-18T15:37:47.970627714Z 2026-11-18 15:37:47,970 INFO Site site-02: gap-free watermark=160, no gaps
+reconciler-1  | 2026-11-18T15:37:48.178730839Z 2026-11-18 15:37:48,177 INFO Site site-03: gap-free watermark=144, no gaps
+reconciler-1  | 2026-11-18T15:37:53.398798842Z 2026-11-18 15:37:53,398 INFO Site site-01: gap-free watermark=189, no gaps
+reconciler-1  | 2026-11-18T15:37:53.599668967Z 2026-11-18 15:37:53,599 INFO Site site-02: gap-free watermark=220, no gaps
+db-1          | 2026-11-18T15:37:23.097423633Z The default text search configuration will be set to "english".
+db-1          | 2026-11-18T15:37:23.097424300Z 
+db-1          | 2026-11-18T15:37:23.097425050Z Data page checksums are disabled.
+db-1          | 2026-11-18T15:37:23.097426133Z 
+db-1          | 2026-11-18T15:37:23.097461050Z fixing permissions on existing directory /var/lib/postgresql/data ... ok
+db-1          | 2026-11-18T15:37:23.102443758Z creating subdirectories ... ok
+db-1          | 2026-11-18T15:37:23.102467800Z selecting dynamic shared memory implementation ... posix
+db-1          | 2026-11-18T15:37:23.113205591Z selecting default "max_connections" ... 100
+db-1          | 2026-11-18T15:37:23.129984091Z selecting default "shared_buffers" ... 128MB
+db-1          | 2026-11-18T15:37:23.155290550Z selecting default time zone ... UTC
+reconciler-1  | 2026-11-18T15:37:53.809433633Z 2026-11-18 15:37:53,806 INFO Site site-03: gap-free watermark=198, no gaps
+reconciler-1  | 2026-11-18T15:37:59.018813428Z 2026-11-18 15:37:59,018 INFO Site site-01: gap-free watermark=243, no gaps
+reconciler-1  | 2026-11-18T15:37:59.227725594Z 2026-11-18 15:37:59,227 INFO Site site-02: gap-free watermark=270, no gaps
+reconciler-1  | 2026-11-18T15:37:59.437105594Z 2026-11-18 15:37:59,436 INFO Site site-03: gap-free watermark=243, no gaps
+reconciler-1  | 2026-11-18T15:38:04.644548514Z 2026-11-18 15:38:04,644 INFO Site site-01: gap-free watermark=297, no gaps
+reconciler-1  | 2026-11-18T15:38:04.850043972Z 2026-11-18 15:38:04,849 INFO Site site-02: gap-free watermark=330, no gaps
+reconciler-1  | 2026-11-18T15:38:05.055963139Z 2026-11-18 15:38:05,055 INFO Site site-03: gap-free watermark=297, no gaps
+reconciler-1  | 2026-11-18T15:38:10.261694502Z 2026-11-18 15:38:10,261 INFO Site site-01: gap-free watermark=342, no gaps
+reconciler-1  | 2026-11-18T15:38:10.465927794Z 2026-11-18 15:38:10,465 INFO Site site-02: gap-free watermark=380, no gaps
+reconciler-1  | 2026-11-18T15:38:10.669027169Z 2026-11-18 15:38:10,668 INFO Site site-03: gap-free watermark=351, no gaps
+reconciler-1  | 2026-11-18T15:38:15.878822880Z 2026-11-18 15:38:15,878 INFO Site site-01: gap-free watermark=396, no gaps
+reconciler-1  | 2026-11-18T15:38:16.086245713Z 2026-11-18 15:38:16,085 INFO Site site-02: gap-free watermark=440, no gaps
+reconciler-1  | 2026-11-18T15:38:16.289314713Z 2026-11-18 15:38:16,289 INFO Site site-03: gap-free watermark=396, no gaps
+reconciler-1  | 2026-11-18T15:38:21.496689757Z 2026-11-18 15:38:21,496 INFO Site site-01: gap-free watermark=441, no gaps
+reconciler-1  | 2026-11-18T15:38:21.699096882Z 2026-11-18 15:38:21,698 INFO Site site-02: gap-free watermark=500, no gaps
+reconciler-1  | 2026-11-18T15:38:21.903421632Z 2026-11-18 15:38:21,902 INFO Site site-03: gap-free watermark=450, no gaps
+reconciler-1  | 2026-11-18T15:38:27.114548177Z 2026-11-18 15:38:27,114 INFO Site site-01: gap-free watermark=495, no gaps
+reconciler-1  | 2026-11-18T15:38:27.317106802Z 2026-11-18 15:38:27,316 INFO Site site-02: gap-free watermark=550, no gaps
+reconciler-1  | 2026-11-18T15:38:27.520871718Z 2026-11-18 15:38:27,520 INFO Site site-03: gap-free watermark=495, no gaps
+reconciler-1  | 2026-11-18T15:38:32.728628554Z 2026-11-18 15:38:32,728 INFO Site site-01: gap-free watermark=549, no gaps
+reconciler-1  | 2026-11-18T15:38:32.936191013Z 2026-11-18 15:38:32,935 INFO Site site-02: gap-free watermark=610, no gaps
+reconciler-1  | 2026-11-18T15:38:33.144395846Z 2026-11-18 15:38:33,144 INFO Site site-03: gap-free watermark=549, no gaps
+reconciler-1  | 2026-11-18T15:38:38.351866918Z 2026-11-18 15:38:38,351 INFO Site site-01: gap-free watermark=594, no gaps
+reconciler-1  | 2026-11-18T15:38:38.553232668Z 2026-11-18 15:38:38,553 INFO Site site-02: gap-free watermark=670, no gaps
+reconciler-1  | 2026-11-18T15:38:38.761030001Z 2026-11-18 15:38:38,760 INFO Site site-03: gap-free watermark=603, no gaps
+reconciler-1  | 2026-11-18T15:38:43.974423254Z 2026-11-18 15:38:43,973 INFO Site site-01: gap-free watermark=648, no gaps
+reconciler-1  | 2026-11-18T15:38:44.184355587Z 2026-11-18 15:38:44,183 INFO Site site-02: gap-free watermark=720, no gaps
+reconciler-1  | 2026-11-18T15:38:44.386252629Z 2026-11-18 15:38:44,386 INFO Site site-03: gap-free watermark=648, no gaps
+reconciler-1  | 2026-11-18T15:38:49.589779840Z 2026-11-18 15:38:49,589 INFO Site site-01: gap-free watermark=702, no gaps
+reconciler-1  | 2026-11-18T15:38:49.802092631Z 2026-11-18 15:38:49,801 INFO Site site-02: gap-free watermark=780, no gaps
+reconciler-1  | 2026-11-18T15:38:50.011861132Z 2026-11-18 15:38:50,011 INFO Site site-03: gap-free watermark=702, no gaps
+reconciler-1  | 2026-11-18T15:38:55.224857967Z 2026-11-18 15:38:55,224 INFO Site site-01: gap-free watermark=747, no gaps
+reconciler-1  | 2026-11-18T15:38:55.427905509Z 2026-11-18 15:38:55,427 INFO Site site-02: gap-free watermark=830, no gaps
+reconciler-1  | 2026-11-18T15:38:55.633288759Z 2026-11-18 15:38:55,633 INFO Site site-03: gap-free watermark=756, no gaps
+reconciler-1  | 2026-11-18T15:39:00.846948178Z 2026-11-18 15:39:00,846 INFO Site site-01: gap-free watermark=801, no gaps
+reconciler-1  | 2026-11-18T15:39:01.048444470Z 2026-11-18 15:39:01,048 INFO Site site-02: gap-free watermark=890, no gaps
+reconciler-1  | 2026-11-18T15:39:01.252368887Z 2026-11-18 15:39:01,252 INFO Site site-03: gap-free watermark=801, no gaps
+reconciler-1  | 2026-11-18T15:39:06.465117125Z 2026-11-18 15:39:06,464 INFO Site site-01: gap-free watermark=810, no gaps
+reconciler-1  | 2026-11-18T15:39:06.675794750Z 2026-11-18 15:39:06,674 INFO Site site-02: gap-free watermark=900, no gaps
+reconciler-1  | 2026-11-18T15:39:06.877094750Z 2026-11-18 15:39:06,876 INFO Site site-03: gap-free watermark=810, no gaps
+reconciler-1  | 2026-11-18T15:39:12.094399836Z 2026-11-18 15:39:12,094 INFO Site site-01: gap-free watermark=810, no gaps
+reconciler-1  | 2026-11-18T15:39:12.301072753Z 2026-11-18 15:39:12,300 INFO Site site-02: gap-free watermark=900, no gaps
+reconciler-1  | 2026-11-18T15:39:12.502092878Z 2026-11-18 15:39:12,501 INFO Site site-03: gap-free watermark=810, no gaps
+db-1          | 2026-11-18T15:37:23.155800175Z creating configuration files ... ok
+db-1          | 2026-11-18T15:37:23.242867425Z running bootstrap script ... ok
+db-1          | 2026-11-18T15:37:23.346489550Z sh: locale: not found
+db-1          | 2026-11-18T15:37:23.346549800Z 2026-11-18 15:37:23.346 UTC [35] WARNING:  no usable system locales were found
+db-1          | 2026-11-18T15:37:23.569387425Z performing post-bootstrap initialization ... ok
+db-1          | 2026-11-18T15:37:23.657506842Z initdb: warning: enabling "trust" authentication for local connections
+db-1          | 2026-11-18T15:37:23.657538800Z initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+db-1          | 2026-11-18T15:37:23.657507008Z syncing data to disk ... ok
+db-1          | 2026-11-18T15:37:23.657546342Z 
+db-1          | 2026-11-18T15:37:23.657547050Z 
+db-1          | 2026-11-18T15:37:23.657547675Z Success. You can now start the database server using:
+db-1          | 2026-11-18T15:37:23.657548467Z 
+db-1          | 2026-11-18T15:37:23.657549217Z     pg_ctl -D /var/lib/postgresql/data -l logfile start
+db-1          | 2026-11-18T15:37:23.657549842Z 
+db-1          | 2026-11-18T15:37:23.688158508Z waiting for server to start....2026-11-18 15:37:23.688 UTC [41] LOG:  starting PostgreSQL 17.10 on aarch64-unknown-linux-musl, compiled by gcc (Alpine 15.2.0) 15.2.0, 64-bit
+db-1          | 2026-11-18T15:37:23.689281092Z 2026-11-18 15:37:23.689 UTC [41] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db-1          | 2026-11-18T15:37:23.692298300Z 2026-11-18 15:37:23.692 UTC [44] LOG:  database system was shut down at 2026-11-18 15:37:23 UTC
+db-1          | 2026-11-18T15:37:23.695449050Z 2026-11-18 15:37:23.695 UTC [41] LOG:  database system is ready to accept connections
+db-1          | 2026-11-18T15:37:23.696274717Z 2026-11-18 15:37:23.696 UTC [47] LOG:  TimescaleDB background worker launcher connected to shared catalogs
+db-1          | 2026-11-18T15:37:23.776147383Z  done
+db-1          | 2026-11-18T15:37:23.776169467Z server started
+db-1          | 2026-11-18T15:37:23.808699342Z CREATE DATABASE
+db-1          | 2026-11-18T15:37:23.809037217Z 
+db-1          | 2026-11-18T15:37:23.809096758Z 
+db-1          | 2026-11-18T15:37:23.809098925Z /usr/local/bin/docker-entrypoint.sh: sourcing /docker-entrypoint-initdb.d/000_install_timescaledb.sh
+db-1          | 2026-11-18T15:37:23.930103425Z CREATE EXTENSION
+db-1          | 2026-11-18T15:37:24.053290800Z CREATE EXTENSION
+db-1          | 2026-11-18T15:37:24.053300425Z 2026-11-18 15:37:24.053 UTC [65] ERROR:  background worker "TimescaleDB Background Worker Scheduler for database 1" trying to connect to template database, exiting
+db-1          | 2026-11-18T15:37:24.169510050Z CREATE EXTENSION
+db-1          | 2026-11-18T15:37:24.169835509Z 
+db-1          | 2026-11-18T15:37:24.169846717Z /usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/001_timescaledb_tune.sh
+db-1          | 2026-11-18T15:37:24.174107634Z [37;1mUsing postgresql.conf at this path:
+db-1          | 2026-11-18T15:37:24.174121009Z [0m/var/lib/postgresql/data/postgresql.conf
+db-1          | 2026-11-18T15:37:24.174122009Z 
+db-1          | 2026-11-18T15:37:24.178505925Z [37;1mWriting backup to:
+db-1          | 2026-11-18T15:37:24.178518009Z [0m/tmp/timescaledb_tune.backup202611181537
+db-1          | 2026-11-18T15:37:24.178518925Z 
+db-1          | 2026-11-18T15:37:24.178519634Z [37;1mRecommendations based on 7.75 GB of available memory and 10 CPUs for PostgreSQL 17
+db-1          | 2026-11-18T15:37:24.178533175Z shared_buffers = 1983MB
+db-1          | 2026-11-18T15:37:24.178536467Z effective_cache_size = 5950MB
+db-1          | 2026-11-18T15:37:24.178537425Z maintenance_work_mem = 1015556kB
+db-1          | 2026-11-18T15:37:24.178538175Z work_mem = 6347kB
+db-1          | 2026-11-18T15:37:24.178546967Z timescaledb.max_background_workers = 16
+db-1          | 2026-11-18T15:37:24.178547842Z max_worker_processes = 29
+db-1          | 2026-11-18T15:37:24.178548509Z max_parallel_workers_per_gather = 5
+db-1          | 2026-11-18T15:37:24.178549217Z max_parallel_workers = 10
+db-1          | 2026-11-18T15:37:24.178549925Z wal_buffers = 16MB
+db-1          | 2026-11-18T15:37:24.178550550Z min_wal_size = 512MB
+db-1          | 2026-11-18T15:37:24.178552550Z default_statistics_target = 100
+db-1          | 2026-11-18T15:37:24.178553217Z random_page_cost = 1.1
+db-1          | 2026-11-18T15:37:24.178553842Z checkpoint_completion_target = 0.9
+db-1          | 2026-11-18T15:37:24.178554467Z max_locks_per_transaction = 128
+db-1          | 2026-11-18T15:37:24.178555092Z autovacuum_max_workers = 10
+db-1          | 2026-11-18T15:37:24.178555717Z autovacuum_naptime = 10
+db-1          | 2026-11-18T15:37:24.178556342Z default_toast_compression = lz4
+db-1          | 2026-11-18T15:37:24.178556967Z jit = off
+db-1          | 2026-11-18T15:37:24.178557675Z effective_io_concurrency = 256
+db-1          | 2026-11-18T15:37:24.178558259Z timescaledb.last_tuned = '2026-11-18T15:37:24Z'
+db-1          | 2026-11-18T15:37:24.178558925Z timescaledb.last_tuned_version = '0.19.0'
+db-1          | 2026-11-18T15:37:24.179049884Z [0m[37;1mSaving changes to: /var/lib/postgresql/data/postgresql.conf
+db-1          | 2026-11-18T15:37:24.179055634Z [0m[37;1mRestart PostgreSQL to apply the modified configuration
+db-1          | 2026-11-18T15:37:24.179992175Z 
+db-1          | 2026-11-18T15:37:24.179999509Z /usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/01-schema.sql
+db-1          | 2026-11-18T15:37:24.185169050Z CREATE EXTENSION
+db-1          | 2026-11-18T15:37:24.185172800Z [0mpsql:/docker-entrypoint-initdb.d/01-schema.sql:1: NOTICE:  extension "timescaledb" already exists, skipping
+db-1          | 2026-11-18T15:37:24.188655884Z CREATE TABLE
+db-1          | 2026-11-18T15:37:24.190970842Z    create_hypertable    
+db-1          | 2026-11-18T15:37:24.190978509Z ------------------------
+db-1          | 2026-11-18T15:37:24.190979259Z  (1,public,telemetry,t)
+db-1          | 2026-11-18T15:37:24.190979925Z (1 row)
+db-1          | 2026-11-18T15:37:24.190980842Z 
+db-1          | 2026-11-18T15:37:24.192162009Z CREATE INDEX
+db-1          | 2026-11-18T15:37:24.193658425Z CREATE TABLE
+db-1          | 2026-11-18T15:37:24.195063217Z CREATE TABLE
+db-1          | 2026-11-18T15:37:24.195441384Z 
+db-1          | 2026-11-18T15:37:24.195444259Z 
+db-1          | 2026-11-18T15:37:24.195964800Z waiting for server to shut down....2026-11-18 15:37:24.195 UTC [41] LOG:  received fast shutdown request
+db-1          | 2026-11-18T15:37:24.197113259Z 2026-11-18 15:37:24.197 UTC [41] LOG:  aborting any active transactions
+db-1          | 2026-11-18T15:37:24.197337342Z 2026-11-18 15:37:24.197 UTC [59] FATAL:  terminating background worker "TimescaleDB Background Worker Scheduler" due to administrator command
+db-1          | 2026-11-18T15:37:24.197361592Z 2026-11-18 15:37:24.197 UTC [68] FATAL:  terminating background worker "TimescaleDB Background Worker Scheduler" due to administrator command
+db-1          | 2026-11-18T15:37:24.197364550Z 2026-11-18 15:37:24.197 UTC [47] FATAL:  terminating background worker "TimescaleDB Background Worker Launcher" due to administrator command
+db-1          | 2026-11-18T15:37:24.200323300Z 2026-11-18 15:37:24.200 UTC [41] LOG:  background worker "TimescaleDB Background Worker Launcher" (PID 47) exited with exit code 1
+db-1          | 2026-11-18T15:37:24.200337800Z 2026-11-18 15:37:24.200 UTC [41] LOG:  background worker "logical replication launcher" (PID 48) exited with exit code 1
+db-1          | 2026-11-18T15:37:24.200338842Z 2026-11-18 15:37:24.200 UTC [41] LOG:  background worker "TimescaleDB Background Worker Scheduler" (PID 59) exited with exit code 1
+db-1          | 2026-11-18T15:37:24.200791550Z 2026-11-18 15:37:24.200 UTC [41] LOG:  background worker "TimescaleDB Background Worker Scheduler" (PID 68) exited with exit code 1
+db-1          | 2026-11-18T15:37:24.201117384Z 2026-11-18 15:37:24.201 UTC [42] LOG:  shutting down
+db-1          | 2026-11-18T15:37:24.201861842Z 2026-11-18 15:37:24.201 UTC [42] LOG:  checkpoint starting: shutdown immediate
+db-1          | 2026-11-18T15:37:24.340725384Z 2026-11-18 15:37:24.340 UTC [42] LOG:  checkpoint complete: wrote 1770 buffers (10.8%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.023 s, sync=0.115 s, total=0.140 s; sync files=771, longest=0.012 s, average=0.001 s; distance=9910 kB, estimate=9910 kB; lsn=0/1E9AAA8, redo lsn=0/1E9AAA8
+db-1          | 2026-11-18T15:37:24.346879134Z 2026-11-18 15:37:24.346 UTC [41] LOG:  database system is shut down
+db-1          | 2026-11-18T15:37:24.397500759Z  done
+db-1          | 2026-11-18T15:37:24.397517050Z server stopped
+db-1          | 2026-11-18T15:37:24.398083175Z 
+db-1          | 2026-11-18T15:37:24.398089009Z PostgreSQL init process complete; ready for start up.
+db-1          | 2026-11-18T15:37:24.398090634Z 
+db-1          | 2026-11-18T15:37:24.435604550Z 2026-11-18 15:37:24.435 UTC [1] LOG:  starting PostgreSQL 17.10 on aarch64-unknown-linux-musl, compiled by gcc (Alpine 15.2.0) 15.2.0, 64-bit
+db-1          | 2026-11-18T15:37:24.435657217Z 2026-11-18 15:37:24.435 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db-1          | 2026-11-18T15:37:24.435661675Z 2026-11-18 15:37:24.435 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db-1          | 2026-11-18T15:37:24.438505800Z 2026-11-18 15:37:24.438 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db-1          | 2026-11-18T15:37:24.440734467Z 2026-11-18 15:37:24.440 UTC [87] LOG:  database system was shut down at 2026-11-18 15:37:24 UTC
+db-1          | 2026-11-18T15:37:24.455815217Z 2026-11-18 15:37:24.455 UTC [1] LOG:  database system is ready to accept connections
+db-1          | 2026-11-18T15:37:24.456639175Z 2026-11-18 15:37:24.456 UTC [90] LOG:  TimescaleDB background worker launcher connected to shared catalogs
